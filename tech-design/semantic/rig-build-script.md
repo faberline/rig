@@ -1,6 +1,22 @@
+---
+id: semantic-rig-build-script
+summary: Lossless source-unit coverage for the rig project build script.
+capability_refs:
+  - id: scenario-engine
+    role: primary
+    claim: record-contract-check-and-json-report
+    coverage: partial
+    rationale: "The project-root build script keeps the rig scenario engine CLI build/install workflow runnable for agents."
+fill_sections: [text-source-unit, changes]
+---
+
+# Semantic TD: rig/build.sh
+
+## Source
+<!-- type: text-source-unit lang: bash -->
+
+```bash
 #!/usr/bin/env bash
-# SPEC-MANAGED: projects/rig/tech-design/semantic/rig-build-script.md#text-source-unit
-# CODEGEN-BEGIN
 # Project-root build dispatch contract (aw:build): debug installs the local
 # binary; release bumps the patch version, installs, commits, and tags.
 set -euo pipefail
@@ -95,4 +111,17 @@ git tag -a "$TAG" -m "Release ${TAG}"
 
 echo ""
 echo "Build complete. rig ${TAG} installed and tagged."
-# CODEGEN-END
+```
+
+## Changes
+<!-- type: changes lang: yaml -->
+
+```yaml
+coverage_kind: semantic
+changes:
+  - path: "projects/rig/build.sh"
+    action: modify
+    section: text-source-unit
+    description: "Regenerate the rig project build script from a TD-owned text source unit."
+    impl_mode: codegen
+```
