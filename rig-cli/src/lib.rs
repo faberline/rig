@@ -1,4 +1,4 @@
-// SPEC-MANAGED: projects/rig/tech-design/semantic/source/projects-rig-rig-cli-src-lib-rs.md#rust-source-unit
+// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-rig-cli-src-lib-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! Shared verb parse + dispatch for the `rig` agent-first CLI.
 //!

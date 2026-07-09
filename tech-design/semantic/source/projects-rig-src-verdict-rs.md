@@ -9,19 +9,19 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized projects/rig/src/verdict.rs
+# Standardized apps/rig/src/verdict.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `projects/rig/src/verdict.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `apps/rig/src/verdict.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `Verdict` | projects/rig/src/verdict.rs | enum | pub | 15 |  |
-| `bucket` | projects/rig/src/verdict.rs | function | pub | 30 | bucket(expected: ExpectedOutcome, raw_passed: bool) -> Verdict |
+| `Verdict` | apps/rig/src/verdict.rs | enum | pub | 15 |  |
+| `bucket` | apps/rig/src/verdict.rs | function | pub | 30 | bucket(expected: ExpectedOutcome, raw_passed: bool) -> Verdict |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -82,11 +82,11 @@ mod tests {
 
 ```yaml
 changes:
-  - path: projects/rig/src/verdict.rs
+  - path: apps/rig/src/verdict.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `projects/rig/src/verdict.rs` captured during rig
+      rust-source-unit (td_ast) source for `apps/rig/src/verdict.rs` captured during rig
       standardization onto the codegen ladder.
 ```

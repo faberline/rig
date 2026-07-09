@@ -1,4 +1,4 @@
-// SPEC-MANAGED: projects/rig/tech-design/semantic/source/projects-rig-src-config-rs.md#rust-source-unit
+// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-config-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! `rig.toml` launcher config — the agent-first knob home. rig's CLI stays
 //! near-zero-args: everything that does NOT change per run (case dirs, pins,
@@ -24,7 +24,7 @@ fn default_duration() -> u64 {
 /// The open-loop schedule injected into every `n>>1` (load) case. Lives in
 /// config, never on the CLI — schedule is project policy, not a per-run knob.
 #[derive(Debug, Clone, Deserialize)]
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-config-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-config-rs.md#source
 pub struct LoadConfig {
     #[serde(default = "default_qps")]
     pub qps: u32,
@@ -34,7 +34,7 @@ pub struct LoadConfig {
     pub duration_secs: u64,
 }
 
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-config-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-config-rs.md#source
 impl Default for LoadConfig {
     fn default() -> Self {
         Self {
@@ -47,7 +47,7 @@ impl Default for LoadConfig {
 
 /// Parsed `rig.toml` launcher config (the launcher sections only).
 #[derive(Debug, Clone, Deserialize, Default)]
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-config-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-config-rs.md#source
 pub struct Config {
     /// Directories of lifecycle case TOMLs to discover.
     #[serde(default)]
@@ -60,7 +60,7 @@ pub struct Config {
     pub load: LoadConfig,
 }
 
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-config-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-config-rs.md#source
 impl Config {
     /// Load `rig.toml` from `dir`. Absent file or parse error => defaults.
     /// Unknown keys (an aw-generated `AW-EC-TOOL` block) are ignored.

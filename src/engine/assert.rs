@@ -1,4 +1,4 @@
-// SPEC-MANAGED: projects/rig/tech-design/semantic/source/projects-rig-src-engine-assert-rs.md#rust-source-unit
+// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-engine-assert-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! The deliberately-tiny assertion expression evaluator.
 //!
@@ -18,7 +18,7 @@ use crate::scenario::interp::VarStore;
 /// Evaluate one expression. `Ok(true)` = holds, `Ok(false)` = violated,
 /// `Err` = malformed expression or unknown var (a scenario_error, not a
 /// failed assertion).
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-engine-assert-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-assert-rs.md#source
 pub fn evaluate(expr: &str, vars: &VarStore) -> Result<bool, String> {
     let tokens: Vec<&str> = expr.split_whitespace().collect();
     let (lhs_name, op, rhs_tokens) = match tokens.as_slice() {

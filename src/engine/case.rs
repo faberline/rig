@@ -1,4 +1,4 @@
-// SPEC-MANAGED: projects/rig/tech-design/semantic/source/projects-rig-src-engine-case-rs.md#rust-source-unit
+// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-engine-case-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! Lifecycle case execution: `prepare(1) -> exercise(N) -> clean(1)`, with the
 //! collector switching on N. `n=1` runs the exercise with full assertions and
@@ -50,7 +50,7 @@ pub enum CaseResult {
 /// Run one lifecycle case end to end. `prepare` runs once (short-circuiting the
 /// case on failure); the exercise is driven per `mode`; `clean` runs once and
 /// never gates.
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-engine-case-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-case-rs.md#source
 pub fn run_case(case: &TestCase, mode: Mode) -> CaseResult {
     let id = case.case_id();
     let mut vars = VarStore::seed(&case.env);

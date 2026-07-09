@@ -9,25 +9,25 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized projects/rig/src/scenario/mod.rs
+# Standardized apps/rig/src/scenario/mod.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `projects/rig/src/scenario/mod.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `apps/rig/src/scenario/mod.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `Limits` | projects/rig/src/scenario/mod.rs | struct | pub | 35 |  |
-| `Scenario` | projects/rig/src/scenario/mod.rs | struct | pub | 56 |  |
-| `VatNeeds` | projects/rig/src/scenario/mod.rs | struct | pub | 24 |  |
-| `interp` | projects/rig/src/scenario/mod.rs | module | pub | 6 |  |
-| `load` | projects/rig/src/scenario/mod.rs | module | pub | 7 |  |
-| `parse_scenario` | projects/rig/src/scenario/mod.rs | function | pub | 73 | parse_scenario(path: &Path, text: &str) -> Result<Scenario, Vec<LintViolation>> |
-| `record` | projects/rig/src/scenario/mod.rs | module | pub | 8 |  |
-| `step` | projects/rig/src/scenario/mod.rs | module | pub | 9 |  |
+| `Limits` | apps/rig/src/scenario/mod.rs | struct | pub | 35 |  |
+| `Scenario` | apps/rig/src/scenario/mod.rs | struct | pub | 56 |  |
+| `VatNeeds` | apps/rig/src/scenario/mod.rs | struct | pub | 24 |  |
+| `interp` | apps/rig/src/scenario/mod.rs | module | pub | 6 |  |
+| `load` | apps/rig/src/scenario/mod.rs | module | pub | 7 |  |
+| `parse_scenario` | apps/rig/src/scenario/mod.rs | function | pub | 73 | parse_scenario(path: &Path, text: &str) -> Result<Scenario, Vec<LintViolation>> |
+| `record` | apps/rig/src/scenario/mod.rs | module | pub | 8 |  |
+| `step` | apps/rig/src/scenario/mod.rs | module | pub | 9 |  |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -209,11 +209,11 @@ expected = "pass"
 
 ```yaml
 changes:
-  - path: projects/rig/src/scenario/mod.rs
+  - path: apps/rig/src/scenario/mod.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `projects/rig/src/scenario/mod.rs` captured during rig
+      rust-source-unit (td_ast) source for `apps/rig/src/scenario/mod.rs` captured during rig
       standardization onto the codegen ladder.
 ```

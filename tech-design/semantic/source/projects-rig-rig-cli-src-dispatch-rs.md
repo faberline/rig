@@ -9,24 +9,24 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized projects/rig/rig-cli/src/dispatch.rs
+# Standardized apps/rig/rig-cli/src/dispatch.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `projects/rig/rig-cli/src/dispatch.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `apps/rig/rig-cli/src/dispatch.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `LintArgs` | projects/rig/rig-cli/src/dispatch.rs | struct | pub | 73 |  |
-| `OutputOpts` | projects/rig/rig-cli/src/dispatch.rs | struct | pub | 27 |  |
-| `RigCommand` | projects/rig/rig-cli/src/dispatch.rs | struct | pub | 17 |  |
-| `RunArgs` | projects/rig/rig-cli/src/dispatch.rs | struct | pub | 53 |  |
-| `Verb` | projects/rig/rig-cli/src/dispatch.rs | enum | pub | 38 |  |
-| `execute` | projects/rig/rig-cli/src/dispatch.rs | function | pub | 81 | execute(cmd: RigCommand) -> RigReport |
-| `print_report` | projects/rig/rig-cli/src/dispatch.rs | function | pub | 588 | print_report(report: &RigReport, opts: &OutputOpts) -> i32 |
+| `LintArgs` | apps/rig/rig-cli/src/dispatch.rs | struct | pub | 73 |  |
+| `OutputOpts` | apps/rig/rig-cli/src/dispatch.rs | struct | pub | 27 |  |
+| `RigCommand` | apps/rig/rig-cli/src/dispatch.rs | struct | pub | 17 |  |
+| `RunArgs` | apps/rig/rig-cli/src/dispatch.rs | struct | pub | 53 |  |
+| `Verb` | apps/rig/rig-cli/src/dispatch.rs | enum | pub | 38 |  |
+| `execute` | apps/rig/rig-cli/src/dispatch.rs | function | pub | 81 | execute(cmd: RigCommand) -> RigReport |
+| `print_report` | apps/rig/rig-cli/src/dispatch.rs | function | pub | 588 | print_report(report: &RigReport, opts: &OutputOpts) -> i32 |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -657,11 +657,11 @@ mod tests {
 
 ```yaml
 changes:
-  - path: projects/rig/rig-cli/src/dispatch.rs
+  - path: apps/rig/rig-cli/src/dispatch.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `projects/rig/rig-cli/src/dispatch.rs` captured during rig
+      rust-source-unit (td_ast) source for `apps/rig/rig-cli/src/dispatch.rs` captured during rig
       standardization onto the codegen ladder.
 ```

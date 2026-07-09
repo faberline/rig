@@ -1,4 +1,4 @@
-// SPEC-MANAGED: projects/rig/tech-design/logic/external-contracts.md#rig-open-loop-load-generator
+// SPEC-MANAGED: apps/rig/tech-design/logic/external-contracts.md#rig-open-loop-load-generator
 // CODEGEN-BEGIN
 // AW-EC-BEGIN
 // @ec rig-open-loop-load-generator

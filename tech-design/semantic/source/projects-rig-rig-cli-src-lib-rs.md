@@ -9,18 +9,18 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized projects/rig/rig-cli/src/lib.rs
+# Standardized apps/rig/rig-cli/src/lib.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `projects/rig/rig-cli/src/lib.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `apps/rig/rig-cli/src/lib.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `dispatch` | projects/rig/rig-cli/src/lib.rs | module | pub | 10 |  |
+| `dispatch` | apps/rig/rig-cli/src/lib.rs | module | pub | 10 |  |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -40,11 +40,11 @@ pub mod dispatch;
 
 ```yaml
 changes:
-  - path: projects/rig/rig-cli/src/lib.rs
+  - path: apps/rig/rig-cli/src/lib.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `projects/rig/rig-cli/src/lib.rs` captured during rig
+      rust-source-unit (td_ast) source for `apps/rig/rig-cli/src/lib.rs` captured during rig
       standardization onto the codegen ladder.
 ```

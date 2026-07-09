@@ -1,4 +1,4 @@
-// SPEC-MANAGED: projects/rig/tech-design/semantic/source/projects-rig-src-lib-rs.md#rust-source-unit
+// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-lib-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! rig — declarative test-scenario harness engine.
 //!

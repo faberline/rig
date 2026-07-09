@@ -9,23 +9,23 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized projects/rig/src/scenario/record.rs
+# Standardized apps/rig/src/scenario/record.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `projects/rig/src/scenario/record.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `apps/rig/src/scenario/record.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `ExpectedOutcome` | projects/rig/src/scenario/record.rs | enum | pub | 29 |  |
-| `LintViolation` | projects/rig/src/scenario/record.rs | struct | pub | 67 |  |
-| `Record` | projects/rig/src/scenario/record.rs | struct | pub | 44 |  |
-| `ScenarioKind` | projects/rig/src/scenario/record.rs | enum | pub | 17 |  |
-| `lint_record` | projects/rig/src/scenario/record.rs | function | pub | 74 | lint_record(path: &Path, record: &Record) -> Vec<LintViolation> |
-| `scenario_id` | projects/rig/src/scenario/record.rs | function | pub | 131 | scenario_id(record: &Record) -> String |
+| `ExpectedOutcome` | apps/rig/src/scenario/record.rs | enum | pub | 29 |  |
+| `LintViolation` | apps/rig/src/scenario/record.rs | struct | pub | 67 |  |
+| `Record` | apps/rig/src/scenario/record.rs | struct | pub | 44 |  |
+| `ScenarioKind` | apps/rig/src/scenario/record.rs | enum | pub | 17 |  |
+| `lint_record` | apps/rig/src/scenario/record.rs | function | pub | 74 | lint_record(path: &Path, record: &Record) -> Vec<LintViolation> |
+| `scenario_id` | apps/rig/src/scenario/record.rs | function | pub | 131 | scenario_id(record: &Record) -> String |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -209,11 +209,11 @@ mod tests {
 
 ```yaml
 changes:
-  - path: projects/rig/src/scenario/record.rs
+  - path: apps/rig/src/scenario/record.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `projects/rig/src/scenario/record.rs` captured during rig
+      rust-source-unit (td_ast) source for `apps/rig/src/scenario/record.rs` captured during rig
       standardization onto the codegen ladder.
 ```

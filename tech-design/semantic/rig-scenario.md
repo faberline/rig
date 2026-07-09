@@ -1,12 +1,12 @@
 ---
 id: semantic-rig-scenario
-summary: Semantic coverage for "projects/rig/src/scenario"
+summary: Semantic coverage for "apps/rig/src/scenario"
 capability_refs:
   - id: "scenario-engine"
     role: primary
     claim: "record-contract-check-and-json-report"
     coverage: partial
-    rationale: "Semantic takeover coverage for existing source group `projects/rig/src/scenario`."
+    rationale: "Semantic takeover coverage for existing source group `apps/rig/src/scenario`."
 fill_sections: [schema, changes]
 ---
 
@@ -18,11 +18,11 @@ fill_sections: [schema, changes]
 ```yaml
 semantic_domain:
   key: "rig/scenario"
-  source_group: "projects/rig/src/scenario"
+  source_group: "apps/rig/src/scenario"
   coverage_kind: semantic
   evidence:
     source_units:
-      - path: "projects/rig/src/scenario/mod.rs"
+      - path: "apps/rig/src/scenario/mod.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["data_model", "service_method"]
@@ -68,8 +68,8 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "projects/rig/src/scenario"
-      - path: "projects/rig/src/scenario/interp.rs"
+          domain: "apps/rig/src/scenario"
+      - path: "apps/rig/src/scenario/interp.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["data_model", "service_method"]
@@ -103,8 +103,8 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "projects/rig/src/scenario"
-      - path: "projects/rig/src/scenario/load.rs"
+          domain: "apps/rig/src/scenario"
+      - path: "apps/rig/src/scenario/load.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["config_surface", "data_model"]
@@ -126,8 +126,8 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "projects/rig/src/scenario"
-      - path: "projects/rig/src/scenario/case.rs"
+          domain: "apps/rig/src/scenario"
+      - path: "apps/rig/src/scenario/case.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["config_surface", "data_model", "service_method"]
@@ -191,8 +191,8 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "projects/rig/src/scenario"
-      - path: "projects/rig/src/scenario/record.rs"
+          domain: "apps/rig/src/scenario"
+      - path: "apps/rig/src/scenario/record.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["data_model", "enum_model", "service_method"]
@@ -226,8 +226,8 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "projects/rig/src/scenario"
-      - path: "projects/rig/src/scenario/step.rs"
+          domain: "apps/rig/src/scenario"
+      - path: "apps/rig/src/scenario/step.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["data_model", "enum_model", "service_method"]
@@ -288,7 +288,7 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "projects/rig/src/scenario"
+          domain: "apps/rig/src/scenario"
 ```
 
 ## Changes
@@ -297,37 +297,37 @@ semantic_domain:
 ```yaml
 coverage_kind: semantic
 changes:
-  - path: "projects/rig/src/scenario/mod.rs"
+  - path: "apps/rig/src/scenario/mod.rs"
     action: modify
     section: schema
     description: |
       Existing source behavior is covered by this feature/domain semantic TD.
     impl_mode: hand-written
-  - path: "projects/rig/src/scenario/interp.rs"
+  - path: "apps/rig/src/scenario/interp.rs"
     action: modify
     section: schema
     description: |
       Existing source behavior is covered by this feature/domain semantic TD.
     impl_mode: hand-written
-  - path: "projects/rig/src/scenario/load.rs"
+  - path: "apps/rig/src/scenario/load.rs"
     action: modify
     section: schema
     description: |
       Existing source behavior is covered by this feature/domain semantic TD.
     impl_mode: hand-written
-  - path: "projects/rig/src/scenario/case.rs"
+  - path: "apps/rig/src/scenario/case.rs"
     action: modify
     section: schema
     description: |
       Existing source behavior is covered by this feature/domain semantic TD.
     impl_mode: hand-written
-  - path: "projects/rig/src/scenario/record.rs"
+  - path: "apps/rig/src/scenario/record.rs"
     action: modify
     section: schema
     description: |
       Existing source behavior is covered by this feature/domain semantic TD.
     impl_mode: hand-written
-  - path: "projects/rig/src/scenario/step.rs"
+  - path: "apps/rig/src/scenario/step.rs"
     action: modify
     section: schema
     description: |

@@ -9,12 +9,12 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized projects/rig/rig-cli/src/bin/rig.rs
+# Standardized apps/rig/rig-cli/src/bin/rig.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `projects/rig/rig-cli/src/bin/rig.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `apps/rig/rig-cli/src/bin/rig.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
@@ -42,11 +42,11 @@ fn main() {
 
 ```yaml
 changes:
-  - path: projects/rig/rig-cli/src/bin/rig.rs
+  - path: apps/rig/rig-cli/src/bin/rig.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `projects/rig/rig-cli/src/bin/rig.rs` captured during rig
+      rust-source-unit (td_ast) source for `apps/rig/rig-cli/src/bin/rig.rs` captured during rig
       standardization onto the codegen ladder.
 ```

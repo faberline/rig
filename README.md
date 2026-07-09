@@ -72,7 +72,7 @@ Required Verification: smoke
 Promise:
 `rig run` discovers declarative scenario records, executes step DSL actions, buckets verdicts, and emits one deterministic `rig.report/1` JSON document.
 Gate Inventory:
-- `cargo test -p rig`; `target/debug/rig lint --dir projects/rig/tests/fixtures/scenarios`
+- `cargo test -p rig`; `target/debug/rig lint --dir apps/rig/tests/fixtures/scenarios`
 
 | Work Root | Kind | WI | Impl | Verification | Maturity | Gate / Evidence |
 |---|---|---:|---|---|---|---|

@@ -1,4 +1,4 @@
-// SPEC-MANAGED: projects/rig/tech-design/semantic/source/projects-rig-src-engine-http-rs.md#rust-source-unit
+// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-engine-http-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! HTTP step execution: one request, expectation checking, jsonpath-lite
 //! capture.
@@ -16,7 +16,7 @@ use crate::scenario::step::HttpRequest;
 
 /// One completed exchange.
 #[derive(Debug)]
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-engine-http-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-http-rs.md#source
 pub struct HttpOutcome {
     pub status: u16,
     pub latency_ms: f64,
@@ -28,7 +28,7 @@ pub struct HttpOutcome {
 /// Execute one request template against the var store. Network-level
 /// failures (connect refused, timeout) come back as a violation with
 /// status 0 — chaos scenarios assert on exactly these.
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-engine-http-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-http-rs.md#source
 pub fn execute(request: &HttpRequest, vars: &VarStore) -> Result<HttpOutcome, String> {
     let url = vars.interpolate(&request.url)?;
     let body = match &request.body {
@@ -116,7 +116,7 @@ pub fn execute(request: &HttpRequest, vars: &VarStore) -> Result<HttpOutcome, St
 
 /// Resolve a capture key against an outcome: `status`, `latency_ms`, or a
 /// `$.dot.path[i]` into the response body.
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-engine-http-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-http-rs.md#source
 pub fn capture_value(outcome: &HttpOutcome, key: &str) -> Option<Value> {
     match key {
         "status" => Some(Value::from(outcome.status)),
@@ -127,7 +127,7 @@ pub fn capture_value(outcome: &HttpOutcome, key: &str) -> Option<Value> {
 }
 
 /// Dot-path subset: `$.a.b[0].c`. Returns a clone of the addressed value.
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-engine-http-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-http-rs.md#source
 pub fn json_path(root: &Value, path: &str) -> Option<Value> {
     let mut current = root;
     let trimmed = path.strip_prefix('$')?;

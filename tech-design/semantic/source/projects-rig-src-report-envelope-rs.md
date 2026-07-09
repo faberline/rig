@@ -9,28 +9,28 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized projects/rig/src/report/envelope.rs
+# Standardized apps/rig/src/report/envelope.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `projects/rig/src/report/envelope.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `apps/rig/src/report/envelope.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `Completion` | projects/rig/src/report/envelope.rs | struct | pub | 86 |  |
-| `EnvBlock` | projects/rig/src/report/envelope.rs | struct | pub | 95 |  |
-| `OverallStatus` | projects/rig/src/report/envelope.rs | enum | pub | 23 |  |
-| `RigReport` | projects/rig/src/report/envelope.rs | struct | pub | 115 |  |
-| `SCHEMA_VERSION` | projects/rig/src/report/envelope.rs | constant | pub | 16 |  |
-| `ScenarioCounts` | projects/rig/src/report/envelope.rs | struct | pub | 73 |  |
-| `Summary` | projects/rig/src/report/envelope.rs | struct | pub | 59 |  |
-| `current` | projects/rig/src/report/envelope.rs | function | pub | 103 | current() -> Self |
-| `exit_code` | projects/rig/src/report/envelope.rs | function | pub | 32 | exit_code(&self) -> i32 |
-| `is_clean` | projects/rig/src/report/envelope.rs | function | pub | 41 | is_clean(&self) -> bool |
-| `rank` | projects/rig/src/report/envelope.rs | function | pub | 46 | rank(&self) -> u8 |
+| `Completion` | apps/rig/src/report/envelope.rs | struct | pub | 86 |  |
+| `EnvBlock` | apps/rig/src/report/envelope.rs | struct | pub | 95 |  |
+| `OverallStatus` | apps/rig/src/report/envelope.rs | enum | pub | 23 |  |
+| `RigReport` | apps/rig/src/report/envelope.rs | struct | pub | 115 |  |
+| `SCHEMA_VERSION` | apps/rig/src/report/envelope.rs | constant | pub | 16 |  |
+| `ScenarioCounts` | apps/rig/src/report/envelope.rs | struct | pub | 73 |  |
+| `Summary` | apps/rig/src/report/envelope.rs | struct | pub | 59 |  |
+| `current` | apps/rig/src/report/envelope.rs | function | pub | 103 | current() -> Self |
+| `exit_code` | apps/rig/src/report/envelope.rs | function | pub | 32 | exit_code(&self) -> i32 |
+| `is_clean` | apps/rig/src/report/envelope.rs | function | pub | 41 | is_clean(&self) -> bool |
+| `rank` | apps/rig/src/report/envelope.rs | function | pub | 46 | rank(&self) -> u8 |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -190,11 +190,11 @@ mod tests {
 
 ```yaml
 changes:
-  - path: projects/rig/src/report/envelope.rs
+  - path: apps/rig/src/report/envelope.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `projects/rig/src/report/envelope.rs` captured during rig
+      rust-source-unit (td_ast) source for `apps/rig/src/report/envelope.rs` captured during rig
       standardization onto the codegen ladder.
 ```

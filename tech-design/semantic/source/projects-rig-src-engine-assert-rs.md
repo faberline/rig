@@ -9,18 +9,18 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized projects/rig/src/engine/assert.rs
+# Standardized apps/rig/src/engine/assert.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `projects/rig/src/engine/assert.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `apps/rig/src/engine/assert.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `evaluate` | projects/rig/src/engine/assert.rs | function | pub | 22 | evaluate(expr: &str, vars: &VarStore) -> Result<bool, String> |
+| `evaluate` | apps/rig/src/engine/assert.rs | function | pub | 22 | evaluate(expr: &str, vars: &VarStore) -> Result<bool, String> |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -160,11 +160,11 @@ mod tests {
 
 ```yaml
 changes:
-  - path: projects/rig/src/engine/assert.rs
+  - path: apps/rig/src/engine/assert.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `projects/rig/src/engine/assert.rs` captured during rig
+      rust-source-unit (td_ast) source for `apps/rig/src/engine/assert.rs` captured during rig
       standardization onto the codegen ladder.
 ```

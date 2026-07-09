@@ -1,4 +1,4 @@
-// SPEC-MANAGED: projects/rig/tech-design/semantic/source/projects-rig-src-report-mod-rs.md#rust-source-unit
+// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-report-mod-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! rig's report surface: one JSON document per verb on stdout.
 

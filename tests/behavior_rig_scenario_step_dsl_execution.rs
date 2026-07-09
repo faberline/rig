@@ -1,4 +1,4 @@
-// SPEC-MANAGED: projects/rig/tech-design/logic/external-contracts.md#rig-scenario-step-dsl-execution
+// SPEC-MANAGED: apps/rig/tech-design/logic/external-contracts.md#rig-scenario-step-dsl-execution
 // CODEGEN-BEGIN
 // AW-EC-BEGIN
 // @ec rig-scenario-step-dsl-execution

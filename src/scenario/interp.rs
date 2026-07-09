@@ -1,4 +1,4 @@
-// SPEC-MANAGED: projects/rig/tech-design/semantic/source/projects-rig-src-scenario-interp-rs.md#rust-source-unit
+// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-scenario-interp-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! `{{var}}` interpolation over a flat variable store.
 //!
@@ -12,12 +12,12 @@ use serde_json::Value;
 use std::collections::BTreeMap;
 
 #[derive(Debug, Clone, Default)]
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-scenario-interp-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-interp-rs.md#source
 pub struct VarStore {
     vars: BTreeMap<String, Value>,
 }
 
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-scenario-interp-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-interp-rs.md#source
 impl VarStore {
     pub fn new() -> Self {
         Self::default()

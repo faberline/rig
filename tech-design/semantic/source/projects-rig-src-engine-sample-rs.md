@@ -9,21 +9,21 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized projects/rig/src/engine/sample.rs
+# Standardized apps/rig/src/engine/sample.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `projects/rig/src/engine/sample.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `apps/rig/src/engine/sample.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `SampleStats` | projects/rig/src/engine/sample.rs | struct | pub | 11 |  |
-| `fold` | projects/rig/src/engine/sample.rs | function | pub | 26 | fold(observations: &[(f64, bool)]) -> Self |
-| `get` | projects/rig/src/engine/sample.rs | function | pub | 50 | get(&self, key: &str) -> Option<f64> |
-| `percentile` | projects/rig/src/engine/sample.rs | function | pub | 65 | percentile(sorted: &[f64], q: f64) -> f64 |
+| `SampleStats` | apps/rig/src/engine/sample.rs | struct | pub | 11 |  |
+| `fold` | apps/rig/src/engine/sample.rs | function | pub | 26 | fold(observations: &[(f64, bool)]) -> Self |
+| `get` | apps/rig/src/engine/sample.rs | function | pub | 50 | get(&self, key: &str) -> Option<f64> |
+| `percentile` | apps/rig/src/engine/sample.rs | function | pub | 65 | percentile(sorted: &[f64], q: f64) -> f64 |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -136,11 +136,11 @@ mod tests {
 
 ```yaml
 changes:
-  - path: projects/rig/src/engine/sample.rs
+  - path: apps/rig/src/engine/sample.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `projects/rig/src/engine/sample.rs` captured during rig
+      rust-source-unit (td_ast) source for `apps/rig/src/engine/sample.rs` captured during rig
       standardization onto the codegen ladder.
 ```

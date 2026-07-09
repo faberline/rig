@@ -1,4 +1,4 @@
-// SPEC-MANAGED: projects/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#rust-source-unit
+// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! Verb tree + dispatch. One JSON `RigReport` per invocation on stdout.
 
@@ -13,7 +13,7 @@ use rig::report::{ReportBuilder, RigReport};
     about = "rig — declarative test-scenario harness: e2e scenarios + open-loop load pins (JSON on stdout by default)",
     disable_help_subcommand = true
 )]
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
 pub struct RigCommand {
     #[command(subcommand)]
     pub verb: Verb,
@@ -23,7 +23,7 @@ pub struct RigCommand {
 
 /// Output-format opt-ins shared by every verb. JSON-on-stdout is the default.
 #[derive(Args, Debug, Clone, Default)]
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
 pub struct OutputOpts {
     /// Render a human-readable summary to stderr in addition to the JSON report.
     #[arg(long, global = true)]
@@ -34,7 +34,7 @@ pub struct OutputOpts {
 }
 
 #[derive(Subcommand, Debug)]
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
 pub enum Verb {
     /// Discover, lint, execute scenarios; gate pins; print ONE report.
     Run(RunArgs),
@@ -47,7 +47,7 @@ pub enum Verb {
 }
 
 #[derive(Args, Debug, Default)]
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
 pub struct RunArgs {
     /// Run a single scenario file.
     #[arg(long, group = "run_target")]
@@ -67,7 +67,7 @@ pub struct RunArgs {
 }
 
 #[derive(Args, Debug, Default)]
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
 pub struct LintArgs {
     /// Override the case directory (default: rig.toml `testpaths`).
     #[arg(long)]
@@ -76,7 +76,7 @@ pub struct LintArgs {
 
 /// `rig test` flags — the lifecycle-case launcher.
 #[derive(Args, Debug, Default)]
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
 pub struct TestArgs {
     /// Dimension to run (positional); omit to run every case from rig.toml `testpaths`.
     pub dimension: Option<String>,
@@ -98,7 +98,7 @@ pub struct TestArgs {
 }
 
 /// Execute a parsed command and return the report to print.
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
 pub fn execute(cmd: RigCommand) -> RigReport {
     match cmd.verb {
         Verb::Run(args) => run_run(args),
@@ -367,7 +367,7 @@ fn run_run(args: RunArgs) -> RigReport {
 /// `--dir`, filter by `--dimension`/`--case`, run each case's prepare/exercise/
 /// clean (verdict for `n=1`, folded stats + pin gate for `n>1`), and emit ONE
 /// `rig.report/1`. `--collect` lists the selection without executing.
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
 fn run_test(args: TestArgs) -> RigReport {
     use rig::engine::case::{run_case, CaseResult, Mode};
     use rig::engine::loadgen::Schedule;
@@ -873,7 +873,7 @@ fn run_report() -> RigReport {
 }
 
 /// Print the report as the single stdout document and return its exit code.
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-rig-cli-src-dispatch-rs.md#source
 pub fn print_report(report: &RigReport, opts: &OutputOpts) -> i32 {
     let json = if opts.compact {
         serde_json::to_string(report)

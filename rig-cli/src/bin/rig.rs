@@ -1,4 +1,4 @@
-// SPEC-MANAGED: projects/rig/tech-design/semantic/source/projects-rig-rig-cli-src-bin-rig-rs.md#rust-source-unit
+// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-rig-cli-src-bin-rig-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! `rig` standalone binary: parse → dispatch → one JSON document → exit code.
 

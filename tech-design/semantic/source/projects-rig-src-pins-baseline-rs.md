@@ -9,25 +9,25 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized projects/rig/src/pins/baseline.rs
+# Standardized apps/rig/src/pins/baseline.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `projects/rig/src/pins/baseline.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `apps/rig/src/pins/baseline.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `BaselineEntry` | projects/rig/src/pins/baseline.rs | struct | pub | 16 |  |
-| `BaselineStore` | projects/rig/src/pins/baseline.rs | struct | pub | 25 |  |
-| `get` | projects/rig/src/pins/baseline.rs | function | pub | 61 | get(&self, scenario_id: &str, metric: &str) -> Option<&BaselineEntry> |
-| `host_fingerprint` | projects/rig/src/pins/baseline.rs | function | pub | 33 | host_fingerprint() -> String |
-| `load` | projects/rig/src/pins/baseline.rs | function | pub | 44 | load(dir: &Path) -> Self |
-| `load_at` | projects/rig/src/pins/baseline.rs | function | pub | 51 | load_at(path: impl Into<PathBuf>) -> Self |
-| `record` | projects/rig/src/pins/baseline.rs | function | pub | 65 | record(&mut self, scenario_id: &str, metric: &str, value: f64) |
-| `save` | projects/rig/src/pins/baseline.rs | function | pub | 81 | save(&self) -> std::io::Result<()> |
+| `BaselineEntry` | apps/rig/src/pins/baseline.rs | struct | pub | 16 |  |
+| `BaselineStore` | apps/rig/src/pins/baseline.rs | struct | pub | 25 |  |
+| `get` | apps/rig/src/pins/baseline.rs | function | pub | 61 | get(&self, scenario_id: &str, metric: &str) -> Option<&BaselineEntry> |
+| `host_fingerprint` | apps/rig/src/pins/baseline.rs | function | pub | 33 | host_fingerprint() -> String |
+| `load` | apps/rig/src/pins/baseline.rs | function | pub | 44 | load(dir: &Path) -> Self |
+| `load_at` | apps/rig/src/pins/baseline.rs | function | pub | 51 | load_at(path: impl Into<PathBuf>) -> Self |
+| `record` | apps/rig/src/pins/baseline.rs | function | pub | 65 | record(&mut self, scenario_id: &str, metric: &str, value: f64) |
+| `save` | apps/rig/src/pins/baseline.rs | function | pub | 81 | save(&self) -> std::io::Result<()> |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -147,11 +147,11 @@ mod tests {
 
 ```yaml
 changes:
-  - path: projects/rig/src/pins/baseline.rs
+  - path: apps/rig/src/pins/baseline.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `projects/rig/src/pins/baseline.rs` captured during rig
+      rust-source-unit (td_ast) source for `apps/rig/src/pins/baseline.rs` captured during rig
       standardization onto the codegen ladder.
 ```

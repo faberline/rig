@@ -9,21 +9,21 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized projects/rig/src/engine/http.rs
+# Standardized apps/rig/src/engine/http.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `projects/rig/src/engine/http.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `apps/rig/src/engine/http.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `HttpOutcome` | projects/rig/src/engine/http.rs | struct | pub | 20 |  |
-| `capture_value` | projects/rig/src/engine/http.rs | function | pub | 120 | capture_value(outcome: &HttpOutcome, key: &str) -> Option<Value> |
-| `execute` | projects/rig/src/engine/http.rs | function | pub | 32 | execute(request: &HttpRequest, vars: &VarStore) -> Result<HttpOutcome, String> |
-| `json_path` | projects/rig/src/engine/http.rs | function | pub | 131 | json_path(root: &Value, path: &str) -> Option<Value> |
+| `HttpOutcome` | apps/rig/src/engine/http.rs | struct | pub | 20 |  |
+| `capture_value` | apps/rig/src/engine/http.rs | function | pub | 120 | capture_value(outcome: &HttpOutcome, key: &str) -> Option<Value> |
+| `execute` | apps/rig/src/engine/http.rs | function | pub | 32 | execute(request: &HttpRequest, vars: &VarStore) -> Result<HttpOutcome, String> |
+| `json_path` | apps/rig/src/engine/http.rs | function | pub | 131 | json_path(root: &Value, path: &str) -> Option<Value> |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -254,11 +254,11 @@ mod tests {
 
 ```yaml
 changes:
-  - path: projects/rig/src/engine/http.rs
+  - path: apps/rig/src/engine/http.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `projects/rig/src/engine/http.rs` captured during rig
+      rust-source-unit (td_ast) source for `apps/rig/src/engine/http.rs` captured during rig
       standardization onto the codegen ladder.
 ```

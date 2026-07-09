@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# SPEC-MANAGED: projects/rig/tech-design/semantic/rig-install-script.md#text-source-unit
+# SPEC-MANAGED: apps/rig/tech-design/semantic/rig-install-script.md#text-source-unit
 # CODEGEN-BEGIN
 set -eu
 

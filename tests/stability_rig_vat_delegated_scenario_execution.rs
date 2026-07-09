@@ -1,4 +1,4 @@
-// SPEC-MANAGED: projects/rig/tech-design/logic/external-contracts.md#rig-vat-delegated-scenario-execution
+// SPEC-MANAGED: apps/rig/tech-design/logic/external-contracts.md#rig-vat-delegated-scenario-execution
 // CODEGEN-BEGIN
 // AW-EC-BEGIN
 // @ec rig-vat-delegated-scenario-execution

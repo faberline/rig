@@ -9,23 +9,23 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized projects/rig/src/pins/mod.rs
+# Standardized apps/rig/src/pins/mod.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `projects/rig/src/pins/mod.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `apps/rig/src/pins/mod.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `GateOutcome` | projects/rig/src/pins/mod.rs | enum | pub | 90 |  |
-| `Pin` | projects/rig/src/pins/mod.rs | struct | pub | 30 |  |
-| `baseline` | projects/rig/src/pins/mod.rs | module | pub | 21 |  |
-| `gate` | projects/rig/src/pins/mod.rs | function | pub | 107 | gate(pin: &Pin, scenario_id: &str, value: f64, store: &BaselineStore) -> GateOutcome |
-| `load_pins` | projects/rig/src/pins/mod.rs | function | pub | 52 | load_pins(dir: &Path) -> Result<Vec<Pin>, String> |
-| `matches` | projects/rig/src/pins/mod.rs | function | pub | 82 | matches(&self, scenario_id: &str) -> bool |
+| `GateOutcome` | apps/rig/src/pins/mod.rs | enum | pub | 90 |  |
+| `Pin` | apps/rig/src/pins/mod.rs | struct | pub | 30 |  |
+| `baseline` | apps/rig/src/pins/mod.rs | module | pub | 21 |  |
+| `gate` | apps/rig/src/pins/mod.rs | function | pub | 107 | gate(pin: &Pin, scenario_id: &str, value: f64, store: &BaselineStore) -> GateOutcome |
+| `load_pins` | apps/rig/src/pins/mod.rs | function | pub | 52 | load_pins(dir: &Path) -> Result<Vec<Pin>, String> |
+| `matches` | apps/rig/src/pins/mod.rs | function | pub | 82 | matches(&self, scenario_id: &str) -> bool |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -56,7 +56,7 @@ use std::path::Path;
 pub use baseline::BaselineStore;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
 pub struct Pin {
     /// Provenance: tracker reference.
     pub issue: String,
@@ -78,7 +78,7 @@ struct PinFile {
 }
 
 /// Collect every `[[pins]]` entry from `*.toml` under `dir` (sorted walk).
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
 pub fn load_pins(dir: &Path) -> Result<Vec<Pin>, String> {
     let mut paths = Vec::new();
     collect(dir, &mut paths).map_err(|e| format!("could not walk `{}`: {e}", dir.display()))?;
@@ -106,7 +106,7 @@ fn collect(dir: &Path, out: &mut Vec<std::path::PathBuf>) -> std::io::Result<()>
     Ok(())
 }
 
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
 impl Pin {
     /// Does this pin gate the given scenario id?
     pub fn matches(&self, scenario_id: &str) -> bool {
@@ -116,7 +116,7 @@ impl Pin {
 
 /// Gate verdict for one pin against one measured value.
 #[derive(Debug, Clone, PartialEq)]
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
 pub enum GateOutcome {
     Pass,
     FloorBreach {
@@ -133,7 +133,7 @@ pub enum GateOutcome {
     },
 }
 
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
 pub fn gate(pin: &Pin, scenario_id: &str, value: f64, store: &BaselineStore) -> GateOutcome {
     if let Some(floor) = pin.floor {
         if value > floor {
@@ -250,11 +250,11 @@ ratchet = 0.8
 
 ```yaml
 changes:
-  - path: projects/rig/src/pins/mod.rs
+  - path: apps/rig/src/pins/mod.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `projects/rig/src/pins/mod.rs` captured during rig
+      rust-source-unit (td_ast) source for `apps/rig/src/pins/mod.rs` captured during rig
       standardization onto the codegen ladder.
 ```

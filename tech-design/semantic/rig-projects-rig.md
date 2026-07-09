@@ -1,6 +1,6 @@
 ---
 id: semantic-rig-projects-rig
-summary: Semantic coverage for "projects/rig"
+summary: Semantic coverage for "apps/rig"
 fill_sections: [schema, changes]
 capability_refs:
   - id: scenario-engine
@@ -10,19 +10,19 @@ capability_refs:
     rationale: "Project-root build and LLM context artifacts keep rig's scenario-engine CLI contract discoverable and runnable."
 ---
 
-# Semantic TD: rig/projects/rig
+# Semantic TD: rig/apps/rig
 
 ## Schema
 <!-- type: schema lang: yaml -->
 
 ```yaml
 semantic_domain:
-  key: "rig/projects/rig"
-  source_group: "projects/rig"
+  key: "rig/apps/rig"
+  source_group: "apps/rig"
   coverage_kind: semantic
   evidence:
     source_units:
-      - path: "projects/rig/build.sh"
+      - path: "apps/rig/build.sh"
         language: "shell"
         ownership_state: "codegen"
         generator_primitives: ["source_unit"]
@@ -31,8 +31,8 @@ semantic_domain:
           ecosystem: "shell"
           role: "source"
           section_type: "schema"
-          domain: "projects/rig"
-      - path: "projects/rig/llms.txt"
+          domain: "apps/rig"
+      - path: "apps/rig/llms.txt"
         language: "llms"
         ownership_state: "codegen"
         generator_primitives: ["project_root_llms"]
@@ -41,8 +41,8 @@ semantic_domain:
           ecosystem: "llms"
           role: "source"
           section_type: "schema"
-          domain: "projects/rig"
-      - path: "projects/rig/install.sh"
+          domain: "apps/rig"
+      - path: "apps/rig/install.sh"
         language: "shell"
         ownership_state: "codegen"
         generator_primitives: ["source_unit"]
@@ -51,7 +51,7 @@ semantic_domain:
           ecosystem: "shell"
           role: "source"
           section_type: "schema"
-          domain: "projects/rig"
+          domain: "apps/rig"
 ```
 
 ## Changes
@@ -60,14 +60,14 @@ semantic_domain:
 ```yaml
 coverage_kind: semantic
 changes:
-  - path: "projects/rig/llms.txt"
+  - path: "apps/rig/llms.txt"
     action: modify
     section: schema
     description: |
       Generated TD-first agent context map from project config, README capability map,
       TD root, build script, and workspace test command.
     impl_mode: codegen
-  - path: "projects/rig/install.sh"
+  - path: "apps/rig/install.sh"
     action: modify
     section: schema
     description: |

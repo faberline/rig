@@ -1,4 +1,4 @@
-// SPEC-MANAGED: projects/rig/tech-design/semantic/source/projects-rig-src-scenario-load-rs.md#rust-source-unit
+// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-scenario-load-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! The `[load]` block — open-loop load profile for `kind = "load"`
 //! scenarios.
@@ -19,7 +19,7 @@ use super::step::HttpRequest;
 pub const ACHIEVED_QPS_HONESTY_RATIO: f64 = 0.95;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-scenario-load-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-load-rs.md#source
 pub struct LoadProfile {
     /// Offered load: requests per second on a fixed-interval schedule.
     pub target_qps: u32,

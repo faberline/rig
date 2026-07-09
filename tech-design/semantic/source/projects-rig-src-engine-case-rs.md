@@ -9,12 +9,12 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized projects/rig/src/engine/case.rs
+# Standardized apps/rig/src/engine/case.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Rust source-unit TD for `projects/rig/src/engine/case.rs`, captured during #39 rig traceability closure.
+Rust source-unit TD for `apps/rig/src/engine/case.rs`, captured during #39 rig traceability closure.
 
 ## Source
 <!-- type: rust-source-unit lang: rust -->
@@ -70,7 +70,7 @@ pub enum CaseResult {
 /// Run one lifecycle case end to end. `prepare` runs once (short-circuiting the
 /// case on failure); the exercise is driven per `mode`; `clean` runs once and
 /// never gates.
-/// @spec projects/rig/tech-design/semantic/source/projects-rig-src-engine-case-rs.md#source
+/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-case-rs.md#source
 pub fn run_case(case: &TestCase, mode: Mode) -> CaseResult {
     let id = case.case_id();
     let mut vars = VarStore::seed(&case.env);
@@ -319,10 +319,10 @@ timeout_ms = 500
 
 ```yaml
 changes:
-  - path: projects/rig/src/engine/case.rs
+  - path: apps/rig/src/engine/case.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `projects/rig/src/engine/case.rs` captured during #39 rig standardization.
+      rust-source-unit (td_ast) source for `apps/rig/src/engine/case.rs` captured during #39 rig standardization.
 ```

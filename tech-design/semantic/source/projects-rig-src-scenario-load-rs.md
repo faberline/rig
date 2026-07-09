@@ -9,20 +9,20 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized projects/rig/src/scenario/load.rs
+# Standardized apps/rig/src/scenario/load.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `projects/rig/src/scenario/load.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `apps/rig/src/scenario/load.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `ACHIEVED_QPS_HONESTY_RATIO` | projects/rig/src/scenario/load.rs | constant | pub | 19 |  |
-| `LOAD_METRICS` | projects/rig/src/scenario/load.rs | constant | pub | 37 |  |
-| `LoadProfile` | projects/rig/src/scenario/load.rs | struct | pub | 23 |  |
+| `ACHIEVED_QPS_HONESTY_RATIO` | apps/rig/src/scenario/load.rs | constant | pub | 19 |  |
+| `LOAD_METRICS` | apps/rig/src/scenario/load.rs | constant | pub | 37 |  |
+| `LoadProfile` | apps/rig/src/scenario/load.rs | struct | pub | 23 |  |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -92,11 +92,11 @@ body = '{"q":1}'
 
 ```yaml
 changes:
-  - path: projects/rig/src/scenario/load.rs
+  - path: apps/rig/src/scenario/load.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `projects/rig/src/scenario/load.rs` captured during rig
+      rust-source-unit (td_ast) source for `apps/rig/src/scenario/load.rs` captured during rig
       standardization onto the codegen ladder.
 ```

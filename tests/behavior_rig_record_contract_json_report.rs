@@ -1,4 +1,4 @@
-// SPEC-MANAGED: projects/rig/tech-design/logic/external-contracts.md#rig-record-contract-json-report
+// SPEC-MANAGED: apps/rig/tech-design/logic/external-contracts.md#rig-record-contract-json-report
 // CODEGEN-BEGIN
 // AW-EC-BEGIN
 // @ec rig-record-contract-json-report

@@ -1,4 +1,4 @@
-// SPEC-MANAGED: projects/rig/tech-design/logic/external-contracts.md#rig-floor-ratchet-pin-gates
+// SPEC-MANAGED: apps/rig/tech-design/logic/external-contracts.md#rig-floor-ratchet-pin-gates
 // CODEGEN-BEGIN
 // AW-EC-BEGIN
 // @ec rig-floor-ratchet-pin-gates
