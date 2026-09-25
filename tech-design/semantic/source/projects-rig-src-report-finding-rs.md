@@ -9,26 +9,26 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized apps/rig/src/report/finding.rs
+# Standardized src/report/finding.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `apps/rig/src/report/finding.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `src/report/finding.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `Finding` | apps/rig/src/report/finding.rs | struct | pub | 108 |  |
-| `Invoke` | apps/rig/src/report/finding.rs | struct | pub | 91 |  |
-| `Kind` | apps/rig/src/report/finding.rs | enum | pub | 53 |  |
-| `Severity` | apps/rig/src/report/finding.rs | enum | pub | 17 |  |
-| `as_str` | apps/rig/src/report/finding.rs | function | pub | 27 | as_str(&self) -> &'static str |
-| `as_str` | apps/rig/src/report/finding.rs | function | pub | 74 | as_str(&self) -> &'static str |
-| `command` | apps/rig/src/report/finding.rs | function | pub | 97 | command(cmd: impl Into<String>) -> Self |
-| `finding_id` | apps/rig/src/report/finding.rs | function | pub | 122 | finding_id(kind: Kind, subject: &str) -> String |
-| `rank` | apps/rig/src/report/finding.rs | function | pub | 38 | rank(&self) -> u8 |
+| `Finding` | src/report/finding.rs | struct | pub | 108 |  |
+| `Invoke` | src/report/finding.rs | struct | pub | 91 |  |
+| `Kind` | src/report/finding.rs | enum | pub | 53 |  |
+| `Severity` | src/report/finding.rs | enum | pub | 17 |  |
+| `as_str` | src/report/finding.rs | function | pub | 27 | as_str(&self) -> &'static str |
+| `as_str` | src/report/finding.rs | function | pub | 74 | as_str(&self) -> &'static str |
+| `command` | src/report/finding.rs | function | pub | 97 | command(cmd: impl Into<String>) -> Self |
+| `finding_id` | src/report/finding.rs | function | pub | 122 | finding_id(kind: Kind, subject: &str) -> String |
+| `rank` | src/report/finding.rs | function | pub | 38 | rank(&self) -> u8 |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -189,11 +189,11 @@ mod tests {
 
 ```yaml
 changes:
-  - path: apps/rig/src/report/finding.rs
+  - path: src/report/finding.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `apps/rig/src/report/finding.rs` captured during rig
+      rust-source-unit (td_ast) source for `src/report/finding.rs` captured during rig
       standardization onto the codegen ladder.
 ```

@@ -1,4 +1,4 @@
-// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-engine-http-rs.md#rust-source-unit
+// SPEC-MANAGED: tech-design/semantic/source/projects-rig-src-engine-http-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! HTTP step execution: one request, expectation checking, jsonpath-lite
 //! capture.

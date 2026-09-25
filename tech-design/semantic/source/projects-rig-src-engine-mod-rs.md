@@ -9,28 +9,28 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized apps/rig/src/engine/mod.rs
+# Standardized src/engine/mod.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `apps/rig/src/engine/mod.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `src/engine/mod.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `ScenarioRun` | apps/rig/src/engine/mod.rs | struct | pub | 29 |  |
-| `assert` | apps/rig/src/engine/mod.rs | module | pub | 11 |  |
-| `exec` | apps/rig/src/engine/mod.rs | module | pub | 12 |  |
-| `http` | apps/rig/src/engine/mod.rs | module | pub | 13 |  |
-| `loadgen` | apps/rig/src/engine/mod.rs | module | pub | 14 |  |
-| `rss` | apps/rig/src/engine/mod.rs | module | pub | 15 |  |
-| `run_scenario` | apps/rig/src/engine/mod.rs | function | pub | 42 | run_scenario(scenario: &Scenario) -> ScenarioRun |
-| `sample` | apps/rig/src/engine/mod.rs | module | pub | 16 |  |
-| `stateful` | apps/rig/src/engine/mod.rs | module | pub | 17 |  |
-| `timeout` | apps/rig/src/engine/mod.rs | module | pub | 17 |  |
-| `transport` | apps/rig/src/engine/mod.rs | module | pub | 18 |  |
+| `ScenarioRun` | src/engine/mod.rs | struct | pub | 29 |  |
+| `assert` | src/engine/mod.rs | module | pub | 11 |  |
+| `exec` | src/engine/mod.rs | module | pub | 12 |  |
+| `http` | src/engine/mod.rs | module | pub | 13 |  |
+| `loadgen` | src/engine/mod.rs | module | pub | 14 |  |
+| `rss` | src/engine/mod.rs | module | pub | 15 |  |
+| `run_scenario` | src/engine/mod.rs | function | pub | 42 | run_scenario(scenario: &Scenario) -> ScenarioRun |
+| `sample` | src/engine/mod.rs | module | pub | 16 |  |
+| `stateful` | src/engine/mod.rs | module | pub | 17 |  |
+| `timeout` | src/engine/mod.rs | module | pub | 17 |  |
+| `transport` | src/engine/mod.rs | module | pub | 18 |  |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -342,11 +342,11 @@ fn expr_snapshot(expr: &str, vars: &VarStore) -> String {
 
 ```yaml
 changes:
-  - path: apps/rig/src/engine/mod.rs
+  - path: src/engine/mod.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `apps/rig/src/engine/mod.rs` captured during rig
+      rust-source-unit (td_ast) source for `src/engine/mod.rs` captured during rig
       standardization onto the codegen ladder.
 ```

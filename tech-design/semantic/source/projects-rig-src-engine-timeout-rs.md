@@ -9,24 +9,24 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized apps/rig/src/engine/timeout.rs
+# Standardized src/engine/timeout.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `apps/rig/src/engine/timeout.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `src/engine/timeout.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `TimeoutPolicy` | apps/rig/src/engine/timeout.rs | struct | pub | 22 |  |
-| `WaitOutcome` | apps/rig/src/engine/timeout.rs | enum | pub | 14 |  |
-| `fixed` | apps/rig/src/engine/timeout.rs | function | pub | 41 | fixed(timeout: Duration) -> Self |
-| `from_env` | apps/rig/src/engine/timeout.rs | function | pub | 31 | from_env(var_name: &str, default_secs: u64) -> Self |
-| `timeout` | apps/rig/src/engine/timeout.rs | function | pub | 53 | timeout(&self) -> Duration |
-| `wait_with_timeout` | apps/rig/src/engine/timeout.rs | function | pub | 61 | wait_with_timeout(mut child: Child, policy: TimeoutPolicy) -> std::io::Result<WaitOutcome> |
-| `with_poll_interval` | apps/rig/src/engine/timeout.rs | function | pub | 48 | with_poll_interval(mut self, poll_interval: Duration) -> Self |
+| `TimeoutPolicy` | src/engine/timeout.rs | struct | pub | 22 |  |
+| `WaitOutcome` | src/engine/timeout.rs | enum | pub | 14 |  |
+| `fixed` | src/engine/timeout.rs | function | pub | 41 | fixed(timeout: Duration) -> Self |
+| `from_env` | src/engine/timeout.rs | function | pub | 31 | from_env(var_name: &str, default_secs: u64) -> Self |
+| `timeout` | src/engine/timeout.rs | function | pub | 53 | timeout(&self) -> Duration |
+| `wait_with_timeout` | src/engine/timeout.rs | function | pub | 61 | wait_with_timeout(mut child: Child, policy: TimeoutPolicy) -> std::io::Result<WaitOutcome> |
+| `with_poll_interval` | src/engine/timeout.rs | function | pub | 48 | with_poll_interval(mut self, poll_interval: Duration) -> Self |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -138,11 +138,11 @@ mod tests {
 
 ```yaml
 changes:
-  - path: apps/rig/src/engine/timeout.rs
+  - path: src/engine/timeout.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `apps/rig/src/engine/timeout.rs` captured during rig
+      rust-source-unit (td_ast) source for `src/engine/timeout.rs` captured during rig
       standardization onto the codegen ladder.
 ```

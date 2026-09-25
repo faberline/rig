@@ -59,27 +59,27 @@ flowchart TD
 
 ```yaml
 changes:
-  - path: apps/rig/src/engine/stateful.rs
+  - path: src/engine/stateful.rs
     action: create
     section: logic
     impl_mode: hand-written
     description: "Add the reusable typed warmup/observe/fault/recover/verify/teardown runner with bounded actions, retained evidence, and deterministic reports. generator gap: missing-generator:stateful-harness (#1645)."
-  - path: apps/rig/src/engine/mod.rs
+  - path: src/engine/mod.rs
     action: modify
     section: logic
     impl_mode: hand-written
     description: "Export the reusable stateful runner. generator gap: missing-generator:engine-module-export (#1645)."
-  - path: apps/rig/tech-design/semantic/source/projects-rig-src-engine-mod-rs.md
+  - path: tech-design/semantic/source/projects-rig-src-engine-mod-rs.md
     action: modify
     section: logic
     impl_mode: hand-written
     description: "Keep the semantic source mirror aligned with the engine module export. generator gap: missing-generator:semantic-source-sync (#1645)."
-  - path: apps/rig/README.md
+  - path: README.md
     action: modify
     section: logic
     impl_mode: hand-written
     description: "Declare the reusable stateful service scenario contract and its shared-consumer boundary. generator gap: missing-generator:capability-doc (#1645)."
-  - path: apps/rig/tests/stateful_service_harness.rs
+  - path: tests/stateful_service_harness.rs
     action: create
     section: unit-test
     impl_mode: hand-written

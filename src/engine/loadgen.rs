@@ -1,4 +1,4 @@
-// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-engine-loadgen-rs.md#rust-source-unit
+// SPEC-MANAGED: tech-design/semantic/source/projects-rig-src-engine-loadgen-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! Open-loop load generator.
 //!
@@ -23,7 +23,7 @@ use super::transport::{HttpTransport, Transport};
 
 /// Folded result of one load run.
 #[derive(Debug, Clone, Default)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-loadgen-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-engine-loadgen-rs.md#source
 pub struct LoadStats {
     pub p50_ms: f64,
     pub p95_ms: f64,
@@ -36,7 +36,7 @@ pub struct LoadStats {
     pub abort: Option<String>,
 }
 
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-loadgen-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-engine-loadgen-rs.md#source
 impl LoadStats {
     pub fn get(&self, key: &str) -> Option<f64> {
         match key {
@@ -52,7 +52,7 @@ impl LoadStats {
 
 /// The open-loop schedule, transport-free: offered rate, concurrency, window.
 #[derive(Debug, Clone, Copy)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-loadgen-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-engine-loadgen-rs.md#source
 pub struct Schedule {
     pub target_qps: u32,
     pub workers: u32,
@@ -62,7 +62,7 @@ pub struct Schedule {
 
 /// Run the HTTP profile. Thin wrapper over [`run_transport`] preserving the
 /// original API. Per-request work happens on `profile.workers` plain threads.
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-loadgen-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-engine-loadgen-rs.md#source
 pub fn run(profile: &LoadProfile, vars: &VarStore) -> LoadStats {
     // Validate every template once. The operation sequence changes for each
     // request, but its shape is known before the load window starts.
@@ -100,7 +100,7 @@ pub fn run(profile: &LoadProfile, vars: &VarStore) -> LoadStats {
 /// for every transport, so two transports (HTTP vs Postgres) measured this way
 /// are comparable by construction. Returns `abort` only when every worker
 /// failed to connect (e.g. the backend is down).
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-loadgen-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-engine-loadgen-rs.md#source
 pub fn run_transport(schedule: &Schedule, transport: &Arc<dyn Transport>) -> LoadStats {
     let interval = Duration::from_secs_f64(1.0 / schedule.target_qps.max(1) as f64);
     let total_ticks = (schedule.target_qps as u64) * schedule.duration_secs;

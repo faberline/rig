@@ -1,4 +1,4 @@
-// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-tests-engine_e2e-rs.md#rust-source-unit
+// SPEC-MANAGED: tech-design/semantic/source/projects-rig-tests-engine_e2e-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! Engine end-to-end: a stub HTTP server (std TcpListener, no framework)
 //! and a multi-step scenario through `engine::run_scenario`.

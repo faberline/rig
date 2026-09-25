@@ -1,6 +1,6 @@
 ---
 id: semantic-rig-install-script
-summary: Lossless text-source-unit coverage for `apps/rig/install.sh`.
+summary: Lossless text-source-unit coverage for `install.sh`.
 capability_refs:
   - id: scenario-engine
     role: primary
@@ -15,7 +15,7 @@ fill_sections: [overview, source, changes]
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Lossless text-source-unit coverage for `apps/rig/install.sh`.
+Lossless text-source-unit coverage for `install.sh`.
 
 ## Source
 <!-- type: text-source-unit lang: bash -->
@@ -59,10 +59,10 @@ fi
 ```yaml
 coverage_kind: semantic
 changes:
-  - path: "apps/rig/install.sh"
+  - path: "install.sh"
     action: modify
     section: text-source-unit
     impl_mode: codegen
     description: |
-      text-source-unit (td_ast) source for `apps/rig/install.sh` captured during rig standardization onto the codegen ladder.
+      text-source-unit (td_ast) source for `install.sh` captured during rig standardization onto the codegen ladder.
 ```

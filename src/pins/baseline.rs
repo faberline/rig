@@ -1,4 +1,4 @@
-// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-pins-baseline-rs.md#rust-source-unit
+// SPEC-MANAGED: tech-design/semantic/source/projects-rig-src-pins-baseline-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! JSON baseline store: `.rig/baselines.json`.
 //!
@@ -12,7 +12,7 @@ use std::collections::BTreeMap;
 use std::path::{Path, PathBuf};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-pins-baseline-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-pins-baseline-rs.md#source
 pub struct BaselineEntry {
     pub value: f64,
     /// Unix seconds at record time.
@@ -21,7 +21,7 @@ pub struct BaselineEntry {
 }
 
 #[derive(Debug, Default, Serialize, Deserialize)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-pins-baseline-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-pins-baseline-rs.md#source
 pub struct BaselineStore {
     #[serde(default)]
     entries: BTreeMap<String, BaselineEntry>,
@@ -29,7 +29,7 @@ pub struct BaselineStore {
     path: Option<PathBuf>,
 }
 
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-pins-baseline-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-pins-baseline-rs.md#source
 pub fn host_fingerprint() -> String {
     format!("{}-{}", std::env::consts::OS, std::env::consts::ARCH)
 }
@@ -38,7 +38,7 @@ fn key(scenario_id: &str, metric: &str) -> String {
     format!("{scenario_id}::{metric}::{}", host_fingerprint())
 }
 
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-pins-baseline-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-pins-baseline-rs.md#source
 impl BaselineStore {
     /// Load from `<dir>/.rig/baselines.json` (absent file = empty store).
     pub fn load(dir: &Path) -> Self {

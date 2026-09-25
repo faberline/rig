@@ -1,4 +1,4 @@
-// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-scenario-interp-rs.md#rust-source-unit
+// SPEC-MANAGED: tech-design/semantic/source/projects-rig-src-scenario-interp-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! `{{var}}` interpolation over a flat variable store.
 //!
@@ -14,13 +14,13 @@ use std::sync::atomic::{AtomicU64, Ordering};
 use std::sync::Arc;
 
 #[derive(Debug, Clone, Default)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-interp-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-interp-rs.md#source
 pub struct VarStore {
     vars: BTreeMap<String, Value>,
     operation_sequence: Arc<AtomicU64>,
 }
 
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-interp-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-interp-rs.md#source
 impl VarStore {
     pub fn new() -> Self {
         Self::default()

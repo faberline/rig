@@ -1,3 +1,25 @@
+[workspace]
+resolver = "2"
+members = [".", "rig-cli"]
+
+[workspace.package]
+authors = ["Chris Cheng <chris.cheng.c4@gmail.com>"]
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/faberline/rig"
+
+[workspace.dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0", features = ["preserve_order"] }
+anyhow = "1.0"
+clap = { version = "4", features = ["derive", "string"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+
 [package]
 name = "rig"
 version = "0.1.0"

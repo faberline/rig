@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# SPEC-MANAGED: apps/rig/tech-design/semantic/rig-build-script.md#text-source-unit
+# SPEC-MANAGED: tech-design/semantic/rig-build-script.md#text-source-unit
 # CODEGEN-BEGIN
 # Project-root build dispatch contract (aw:build): debug installs the local
 # binary; release installs, commits, and prints the tag to push after git:land.
@@ -7,7 +7,7 @@ set -euo pipefail
 
 usage() {
   cat <<'EOF'
-Usage: apps/rig/build.sh <debug|release>
+Usage: build.sh <debug|release>
 
 debug    Build rig-cli and install target/debug/rig to ~/.cargo/bin/rig.
 release  Build/install rig, create a release commit, and print the tag to push after git:land.
@@ -18,7 +18,7 @@ fail_hint() {
   local mode="$1"
   echo ""
   echo "Build failed."
-  echo "Retry with: apps/rig/build.sh ${mode}"
+  echo "Retry with: build.sh ${mode}"
   echo "Verify with: ~/.cargo/bin/rig --version"
 }
 
@@ -59,8 +59,8 @@ install_rig() {
 }
 
 if [[ "$MODE" == "debug" ]]; then
-  VERSION_FILES=(apps/rig/Cargo.toml apps/rig/rig-cli/Cargo.toml)
-  CURRENT_VERSION="$(project_build_read_version apps/rig/rig-cli/Cargo.toml)"
+  VERSION_FILES=(Cargo.toml rig-cli/Cargo.toml)
+  CURRENT_VERSION="$(project_build_read_version rig-cli/Cargo.toml)"
   project_build_prepare_debug_version rig "$CURRENT_VERSION" "${VERSION_FILES[@]}"
   cargo build -p rig-cli
   install_rig debug
@@ -70,8 +70,8 @@ if [[ "$MODE" == "debug" ]]; then
   exit 0
 fi
 
-VERSION_FILES=(apps/rig/Cargo.toml apps/rig/rig-cli/Cargo.toml)
-CURRENT_VERSION="$(project_build_read_version apps/rig/rig-cli/Cargo.toml)"
+VERSION_FILES=(Cargo.toml rig-cli/Cargo.toml)
+CURRENT_VERSION="$(project_build_read_version rig-cli/Cargo.toml)"
 export PROJECT_BUILD_REQUIRE_REMOTE_TAG_CHECK=1
 project_build_prepare_release_version rig "$CURRENT_VERSION" "${VERSION_FILES[@]}"
 
@@ -80,7 +80,7 @@ cargo build --release -p rig-cli
 install_rig release
 
 TAG="${PROJECT_BUILD_RELEASE_TAG}"
-git add Cargo.lock apps/rig
+git add Cargo.lock Cargo.toml rig-cli/Cargo.toml
 git commit --allow-empty -m "release(rig): ${TAG}"
 
 project_build_print_release_next_steps rig "$TAG"

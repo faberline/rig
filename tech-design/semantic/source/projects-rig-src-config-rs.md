@@ -9,12 +9,12 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized apps/rig/src/config.rs
+# Standardized src/config.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Rust source-unit TD for `apps/rig/src/config.rs`, captured during #39 rig traceability closure.
+Rust source-unit TD for `src/config.rs`, captured during #39 rig traceability closure.
 
 ## Source
 <!-- type: rust-source-unit lang: rust -->
@@ -44,7 +44,7 @@ fn default_duration() -> u64 {
 /// The open-loop schedule injected into every `n>>1` (load) case. Lives in
 /// config, never on the CLI — schedule is project policy, not a per-run knob.
 #[derive(Debug, Clone, Deserialize)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-config-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-config-rs.md#source
 pub struct LoadConfig {
     #[serde(default = "default_qps")]
     pub qps: u32,
@@ -54,7 +54,7 @@ pub struct LoadConfig {
     pub duration_secs: u64,
 }
 
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-config-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-config-rs.md#source
 impl Default for LoadConfig {
     fn default() -> Self {
         Self {
@@ -67,7 +67,7 @@ impl Default for LoadConfig {
 
 /// Parsed `rig.toml` launcher config (the launcher sections only).
 #[derive(Debug, Clone, Deserialize, Default)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-config-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-config-rs.md#source
 pub struct Config {
     /// Directories of lifecycle case TOMLs to discover.
     #[serde(default)]
@@ -80,7 +80,7 @@ pub struct Config {
     pub load: LoadConfig,
 }
 
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-config-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-config-rs.md#source
 impl Config {
     /// Load `rig.toml` from `dir`. Absent file or parse error => defaults.
     /// Unknown keys (an aw-generated `AW-EC-TOOL` block) are ignored.
@@ -139,10 +139,10 @@ mod tests {
 
 ```yaml
 changes:
-  - path: apps/rig/src/config.rs
+  - path: src/config.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `apps/rig/src/config.rs` captured during #39 rig standardization.
+      rust-source-unit (td_ast) source for `src/config.rs` captured during #39 rig standardization.
 ```

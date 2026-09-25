@@ -1,12 +1,12 @@
 ---
 id: semantic-rig-engine
-summary: Semantic coverage for "apps/rig/src/engine"
+summary: Semantic coverage for "src/engine"
 capability_refs:
   - id: "scenario-engine"
     role: primary
     claim: "record-contract-check-and-json-report"
     coverage: partial
-    rationale: "Semantic takeover coverage for existing source group `apps/rig/src/engine`."
+    rationale: "Semantic takeover coverage for existing source group `src/engine`."
 fill_sections: [schema, changes]
 ---
 
@@ -18,11 +18,11 @@ fill_sections: [schema, changes]
 ```yaml
 semantic_domain:
   key: "rig/engine"
-  source_group: "apps/rig/src/engine"
+  source_group: "src/engine"
   coverage_kind: semantic
   evidence:
     source_units:
-      - path: "apps/rig/src/engine/timeout.rs"
+      - path: "src/engine/timeout.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["data_model", "enum_model", "service_method"]
@@ -56,8 +56,8 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "apps/rig/src/engine"
-      - path: "apps/rig/src/engine/assert.rs"
+          domain: "src/engine"
+      - path: "src/engine/assert.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["service_method"]
@@ -76,8 +76,8 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "apps/rig/src/engine"
-      - path: "apps/rig/src/engine/exec.rs"
+          domain: "src/engine"
+      - path: "src/engine/exec.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["data_model", "service_method"]
@@ -96,8 +96,8 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "apps/rig/src/engine"
-      - path: "apps/rig/src/engine/transport.rs"
+          domain: "src/engine"
+      - path: "src/engine/transport.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["data_model", "service_method"]
@@ -131,8 +131,8 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "apps/rig/src/engine"
-      - path: "apps/rig/src/engine/rss.rs"
+          domain: "src/engine"
+      - path: "src/engine/rss.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["service_method"]
@@ -154,8 +154,8 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "apps/rig/src/engine"
-      - path: "apps/rig/src/engine/mod.rs"
+          domain: "src/engine"
+      - path: "src/engine/mod.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["data_model", "enum_model", "service_method"]
@@ -216,8 +216,8 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "apps/rig/src/engine"
-      - path: "apps/rig/src/engine/http.rs"
+          domain: "src/engine"
+      - path: "src/engine/http.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["data_model", "service_method"]
@@ -245,8 +245,8 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "apps/rig/src/engine"
-      - path: "apps/rig/src/engine/case.rs"
+          domain: "src/engine"
+      - path: "src/engine/case.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["enum_model", "service_method"]
@@ -289,8 +289,8 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "apps/rig/src/engine"
-      - path: "apps/rig/src/engine/loadgen.rs"
+          domain: "src/engine"
+      - path: "src/engine/loadgen.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["data_model", "service_method"]
@@ -318,8 +318,8 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "apps/rig/src/engine"
-      - path: "apps/rig/src/engine/sample.rs"
+          domain: "src/engine"
+      - path: "src/engine/sample.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["data_model", "service_method"]
@@ -344,7 +344,7 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "apps/rig/src/engine"
+          domain: "src/engine"
 ```
 
 ## Changes
@@ -353,61 +353,61 @@ semantic_domain:
 ```yaml
 coverage_kind: semantic
 changes:
-  - path: "apps/rig/src/engine/timeout.rs"
+  - path: "src/engine/timeout.rs"
     action: modify
     section: schema
     description: |
       Existing source behavior is covered by this feature/domain semantic TD.
     impl_mode: hand-written
-  - path: "apps/rig/src/engine/assert.rs"
+  - path: "src/engine/assert.rs"
     action: modify
     section: schema
     description: |
       Existing source behavior is covered by this feature/domain semantic TD.
     impl_mode: hand-written
-  - path: "apps/rig/src/engine/exec.rs"
+  - path: "src/engine/exec.rs"
     action: modify
     section: schema
     description: |
       Existing source behavior is covered by this feature/domain semantic TD.
     impl_mode: hand-written
-  - path: "apps/rig/src/engine/transport.rs"
+  - path: "src/engine/transport.rs"
     action: modify
     section: schema
     description: |
       Existing source behavior is covered by this feature/domain semantic TD.
     impl_mode: hand-written
-  - path: "apps/rig/src/engine/rss.rs"
+  - path: "src/engine/rss.rs"
     action: modify
     section: schema
     description: |
       Existing source behavior is covered by this feature/domain semantic TD.
     impl_mode: hand-written
-  - path: "apps/rig/src/engine/mod.rs"
+  - path: "src/engine/mod.rs"
     action: modify
     section: schema
     description: |
       Existing source behavior is covered by this feature/domain semantic TD.
     impl_mode: hand-written
-  - path: "apps/rig/src/engine/http.rs"
+  - path: "src/engine/http.rs"
     action: modify
     section: schema
     description: |
       Existing source behavior is covered by this feature/domain semantic TD.
     impl_mode: hand-written
-  - path: "apps/rig/src/engine/case.rs"
+  - path: "src/engine/case.rs"
     action: modify
     section: schema
     description: |
       Existing source behavior is covered by this feature/domain semantic TD.
     impl_mode: hand-written
-  - path: "apps/rig/src/engine/loadgen.rs"
+  - path: "src/engine/loadgen.rs"
     action: modify
     section: schema
     description: |
       Existing source behavior is covered by this feature/domain semantic TD.
     impl_mode: hand-written
-  - path: "apps/rig/src/engine/sample.rs"
+  - path: "src/engine/sample.rs"
     action: modify
     section: schema
     description: |

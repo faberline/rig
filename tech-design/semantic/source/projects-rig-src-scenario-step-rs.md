@@ -9,28 +9,28 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized apps/rig/src/scenario/step.rs
+# Standardized src/scenario/step.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `apps/rig/src/scenario/step.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `src/scenario/step.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `AssertStep` | apps/rig/src/scenario/step.rs | struct | pub | 109 |  |
-| `ExecStep` | apps/rig/src/scenario/step.rs | struct | pub | 148 |  |
-| `HttpExpect` | apps/rig/src/scenario/step.rs | struct | pub | 15 |  |
-| `HttpRequest` | apps/rig/src/scenario/step.rs | struct | pub | 66 |  |
-| `HttpStep` | apps/rig/src/scenario/step.rs | struct | pub | 78 |  |
-| `MeasureRssStep` | apps/rig/src/scenario/step.rs | struct | pub | 132 |  |
-| `SampleStep` | apps/rig/src/scenario/step.rs | struct | pub | 91 |  |
-| `Step` | apps/rig/src/scenario/step.rs | enum | pub | 169 |  |
-| `WaitUntilStep` | apps/rig/src/scenario/step.rs | struct | pub | 117 |  |
-| `name` | apps/rig/src/scenario/step.rs | function | pub | 181 | name(&self) -> &str |
-| `status_ok` | apps/rig/src/scenario/step.rs | function | pub | 34 | status_ok(&self, status: u16) -> bool |
+| `AssertStep` | src/scenario/step.rs | struct | pub | 109 |  |
+| `ExecStep` | src/scenario/step.rs | struct | pub | 148 |  |
+| `HttpExpect` | src/scenario/step.rs | struct | pub | 15 |  |
+| `HttpRequest` | src/scenario/step.rs | struct | pub | 66 |  |
+| `HttpStep` | src/scenario/step.rs | struct | pub | 78 |  |
+| `MeasureRssStep` | src/scenario/step.rs | struct | pub | 132 |  |
+| `SampleStep` | src/scenario/step.rs | struct | pub | 91 |  |
+| `Step` | src/scenario/step.rs | enum | pub | 169 |  |
+| `WaitUntilStep` | src/scenario/step.rs | struct | pub | 117 |  |
+| `name` | src/scenario/step.rs | function | pub | 181 | name(&self) -> &str |
+| `status_ok` | src/scenario/step.rs | function | pub | 34 | status_ok(&self, status: u16) -> bool |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -301,11 +301,11 @@ exprs = ["recovery_p99 <= 2 * baseline_p99"]
 
 ```yaml
 changes:
-  - path: apps/rig/src/scenario/step.rs
+  - path: src/scenario/step.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `apps/rig/src/scenario/step.rs` captured during rig
+      rust-source-unit (td_ast) source for `src/scenario/step.rs` captured during rig
       standardization onto the codegen ladder.
 ```

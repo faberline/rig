@@ -9,21 +9,21 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized apps/rig/src/engine/http.rs
+# Standardized src/engine/http.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `apps/rig/src/engine/http.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `src/engine/http.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `HttpOutcome` | apps/rig/src/engine/http.rs | struct | pub | 19 |  |
-| `capture_value` | apps/rig/src/engine/http.rs | function | pub | 131 | capture_value(outcome: &HttpOutcome, key: &str) -> Option<Value> |
-| `execute` | apps/rig/src/engine/http.rs | function | pub | 30 | execute(request: &HttpRequest, vars: &VarStore) -> Result<HttpOutcome, String> |
-| `json_path` | apps/rig/src/engine/http.rs | function | pub | 141 | json_path(root: &Value, path: &str) -> Option<Value> |
+| `HttpOutcome` | src/engine/http.rs | struct | pub | 19 |  |
+| `capture_value` | src/engine/http.rs | function | pub | 131 | capture_value(outcome: &HttpOutcome, key: &str) -> Option<Value> |
+| `execute` | src/engine/http.rs | function | pub | 30 | execute(request: &HttpRequest, vars: &VarStore) -> Result<HttpOutcome, String> |
+| `json_path` | src/engine/http.rs | function | pub | 141 | json_path(root: &Value, path: &str) -> Option<Value> |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -270,11 +270,11 @@ mod tests {
 
 ```yaml
 changes:
-  - path: apps/rig/src/engine/http.rs
+  - path: src/engine/http.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `apps/rig/src/engine/http.rs` captured during rig
+      rust-source-unit (td_ast) source for `src/engine/http.rs` captured during rig
       standardization onto the codegen ladder.
 ```

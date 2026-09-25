@@ -9,18 +9,18 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized apps/rig/src/engine/rss.rs
+# Standardized src/engine/rss.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `apps/rig/src/engine/rss.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `src/engine/rss.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `execute` | apps/rig/src/engine/rss.rs | function | pub | 16 | execute(step: &MeasureRssStep, vars: &mut VarStore) -> Result<(), String> |
+| `execute` | src/engine/rss.rs | function | pub | 16 | execute(step: &MeasureRssStep, vars: &mut VarStore) -> Result<(), String> |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -135,11 +135,11 @@ mod tests {
 
 ```yaml
 changes:
-  - path: apps/rig/src/engine/rss.rs
+  - path: src/engine/rss.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `apps/rig/src/engine/rss.rs` captured during rig
+      rust-source-unit (td_ast) source for `src/engine/rss.rs` captured during rig
       standardization onto the codegen ladder.
 ```

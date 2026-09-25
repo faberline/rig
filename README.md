@@ -78,7 +78,7 @@ buckets verdicts, and emits one deterministic `rig.report/1` JSON document.
 - Gate — behavior: `rig` - declarative scenario records, step DSL execution,
   assertions, verdict bucketing, and rig.report/1 output
 - Gate: `cargo test -p rig`
-- Gate: `target/debug/rig lint --dir apps/rig/tests/fixtures/scenarios`
+- Gate: `target/debug/rig lint --dir tests/fixtures/scenarios`
 
 | Work Root | Kind | WI | Gate / Evidence |
 |---|---|---:|---|

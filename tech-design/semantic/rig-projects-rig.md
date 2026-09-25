@@ -22,7 +22,7 @@ semantic_domain:
   coverage_kind: semantic
   evidence:
     source_units:
-      - path: "apps/rig/build.sh"
+      - path: "build.sh"
         language: "shell"
         ownership_state: "codegen"
         generator_primitives: ["source_unit"]
@@ -32,7 +32,7 @@ semantic_domain:
           role: "source"
           section_type: "schema"
           domain: "apps/rig"
-      - path: "apps/rig/llms.txt"
+      - path: "llms.txt"
         language: "llms"
         ownership_state: "codegen"
         generator_primitives: ["project_root_llms"]
@@ -42,7 +42,7 @@ semantic_domain:
           role: "source"
           section_type: "schema"
           domain: "apps/rig"
-      - path: "apps/rig/install.sh"
+      - path: "install.sh"
         language: "shell"
         ownership_state: "codegen"
         generator_primitives: ["source_unit"]
@@ -60,14 +60,14 @@ semantic_domain:
 ```yaml
 coverage_kind: semantic
 changes:
-  - path: "apps/rig/llms.txt"
+  - path: "llms.txt"
     action: modify
     section: schema
     description: |
       Generated TD-first agent context map from project config, README capability map,
       TD root, build script, and workspace test command.
     impl_mode: codegen
-  - path: "apps/rig/install.sh"
+  - path: "install.sh"
     action: modify
     section: schema
     description: |

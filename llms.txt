@@ -1,4 +1,4 @@
-<!-- SPEC-MANAGED: apps/rig/tech-design/semantic/rig-projects-rig.md#schema -->
+<!-- SPEC-MANAGED: tech-design/semantic/rig-projects-rig.md#schema -->
 <!-- CODEGEN-BEGIN -->
 # rig Agent Context
 
@@ -7,7 +7,7 @@
 ## Tech Design
 
 - [Tech Design](tech-design): implementation source of truth.
-- Validate: `aw td check apps/rig/tech-design`.
+- Validate: `aw td check tech-design`.
 
 ## Capability Map
 

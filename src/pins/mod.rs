@@ -1,4 +1,4 @@
-// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#rust-source-unit
+// SPEC-MANAGED: tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! Declarative pins: floor + ratchet gates over scenario metrics.
 //!
@@ -26,7 +26,7 @@ use std::path::Path;
 pub use baseline::BaselineStore;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
 pub struct Pin {
     /// Provenance: tracker reference.
     pub issue: String,
@@ -48,7 +48,7 @@ struct PinFile {
 }
 
 /// Collect every `[[pins]]` entry from `*.toml` under `dir` (sorted walk).
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
 pub fn load_pins(dir: &Path) -> Result<Vec<Pin>, String> {
     let mut paths = Vec::new();
     collect(dir, &mut paths).map_err(|e| format!("could not walk `{}`: {e}", dir.display()))?;
@@ -76,7 +76,7 @@ fn collect(dir: &Path, out: &mut Vec<std::path::PathBuf>) -> std::io::Result<()>
     Ok(())
 }
 
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
 impl Pin {
     /// Does this pin gate the given scenario id?
     pub fn matches(&self, scenario_id: &str) -> bool {
@@ -86,7 +86,7 @@ impl Pin {
 
 /// Gate verdict for one pin against one measured value.
 #[derive(Debug, Clone, PartialEq)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
 pub enum GateOutcome {
     Pass,
     FloorBreach {
@@ -103,7 +103,7 @@ pub enum GateOutcome {
     },
 }
 
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-pins-mod-rs.md#source
 pub fn gate(pin: &Pin, scenario_id: &str, value: f64, store: &BaselineStore) -> GateOutcome {
     if let Some(floor) = pin.floor {
         if value > floor {

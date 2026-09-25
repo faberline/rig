@@ -1,4 +1,4 @@
-// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-discovery-rs.md#rust-source-unit
+// SPEC-MANAGED: tech-design/semantic/source/projects-rig-src-discovery-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! Scenario discovery: walk a directory for `*.toml` scenario files,
 //! parse, and lint. Pins/config trees are excluded by convention —
@@ -9,7 +9,7 @@ use std::path::{Path, PathBuf};
 use crate::scenario::{parse_scenario, LintViolation, Scenario};
 
 /// One discovered file: parsed scenario or its lint violations.
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-discovery-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-discovery-rs.md#source
 pub struct Discovered {
     pub path: PathBuf,
     pub result: Result<Scenario, Vec<LintViolation>>,
@@ -17,7 +17,7 @@ pub struct Discovered {
 
 /// Recursively collect every `*.toml` under `root` (sorted for
 /// determinism), skipping `config/` and dot-directories.
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-discovery-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-discovery-rs.md#source
 pub fn discover(root: &Path) -> std::io::Result<Vec<Discovered>> {
     let mut files = Vec::new();
     collect_toml_files(root, &mut files)?;

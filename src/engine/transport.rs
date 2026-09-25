@@ -1,4 +1,4 @@
-// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-engine-transport-rs.md#rust-source-unit
+// SPEC-MANAGED: tech-design/semantic/source/projects-rig-src-engine-transport-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! Pluggable load transports — the per-operation work the open-loop
 //! [`loadgen`](super::loadgen) scheduler drives.

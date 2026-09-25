@@ -1,4 +1,4 @@
-// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-scenario-record-rs.md#rust-source-unit
+// SPEC-MANAGED: tech-design/semantic/source/projects-rig-src-scenario-record-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! The embedded `[record]` table — the machine-readable identity of a
 //! scenario file. The record is the source of truth, not the path; the
@@ -13,7 +13,7 @@ use std::path::Path;
 /// Scenario kind: which execution engine drives the file.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-record-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-record-rs.md#source
 pub enum ScenarioKind {
     /// Step-DSL behavior scenario.
     E2e,
@@ -25,7 +25,7 @@ pub enum ScenarioKind {
 /// flips a failure into a pass.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-record-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-record-rs.md#source
 pub enum ExpectedOutcome {
     /// Must pass; a failure is RED and gates the run.
     Pass,
@@ -40,7 +40,7 @@ pub enum ExpectedOutcome {
 /// The `[record]` table. `dimension` must equal the scenario file's parent
 /// directory name and `case` its file stem (enforced by [`lint_record`]).
 #[derive(Debug, Clone, Serialize, Deserialize)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-record-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-record-rs.md#source
 pub struct Record {
     /// Owning suite/project, e.g. `lumen`.
     pub suite: String,
@@ -63,14 +63,14 @@ fn default_required() -> bool {
 
 /// One lint violation, ready to become a `lint_error` finding.
 #[derive(Debug, Clone, PartialEq, Eq)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-record-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-record-rs.md#source
 pub struct LintViolation {
     pub message: String,
 }
 
 /// Enforce the path==record invariant and field sanity for a scenario file
 /// at `path` whose parsed record is `record`.
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-record-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-record-rs.md#source
 pub fn lint_record(path: &Path, record: &Record) -> Vec<LintViolation> {
     let mut violations = Vec::new();
     let stem = path
@@ -127,7 +127,7 @@ pub fn lint_record(path: &Path, record: &Record) -> Vec<LintViolation> {
 
 /// `suite/dimension/case` — the stable scenario id used in reports, pins,
 /// and baselines.
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-record-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-record-rs.md#source
 pub fn scenario_id(record: &Record) -> String {
     format!("{}/{}/{}", record.suite, record.dimension, record.case)
 }

@@ -4,10 +4,7 @@ use std::path::PathBuf;
 #[test]
 fn generated_contract_cases_reference_live_non_ignored_tests() {
     let manifest_dir = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
-    let repository = manifest_dir
-        .parent()
-        .and_then(|apps| apps.parent())
-        .expect("apps/rig must be inside the repository root");
+    let repository = manifest_dir.as_path();
     let manifest_text =
         fs::read_to_string(manifest_dir.join("aw.toml")).expect("read the Rig project manifest");
     let manifest: toml::Value = toml::from_str(&manifest_text).expect("parse the Rig manifest");

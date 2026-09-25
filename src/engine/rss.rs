@@ -1,4 +1,4 @@
-// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-engine-rss-rs.md#rust-source-unit
+// SPEC-MANAGED: tech-design/semantic/source/projects-rig-src-engine-rss-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! `measure_rss`: sample a process's resident set size into a var.
 //!
@@ -12,7 +12,7 @@ use std::process::Command;
 use crate::scenario::interp::VarStore;
 use crate::scenario::step::MeasureRssStep;
 
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-rss-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-engine-rss-rs.md#source
 pub fn execute(step: &MeasureRssStep, vars: &mut VarStore) -> Result<(), String> {
     let pid = resolve_pid(step, vars)?;
     let rss_kb = rss_kb_of(pid)?;

@@ -9,12 +9,12 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized apps/rig/src/scenario/case.rs
+# Standardized src/scenario/case.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Rust source-unit TD for `apps/rig/src/scenario/case.rs`, captured during #39 rig traceability closure.
+Rust source-unit TD for `src/scenario/case.rs`, captured during #39 rig traceability closure.
 
 ## Source
 <!-- type: rust-source-unit lang: rust -->
@@ -48,7 +48,7 @@ fn default_metric() -> String {
 /// `[case]` — the lifecycle case identity. `id` MUST equal the filename stem
 /// and `dimension` the parent directory (path==record, enforced by lint).
 #[derive(Debug, Clone, Serialize, Deserialize)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
 pub struct CaseRecord {
     /// snake_case case key; MUST equal the filename stem.
     pub id: String,
@@ -72,7 +72,7 @@ pub struct CaseRecord {
 /// vat via `needs`/`runner`; case-local `[[prepare.step]]` entries are
 /// lightweight http/sql only (enforced by lint in rig-2).
 #[derive(Debug, Clone, Default, Serialize, Deserialize)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
 pub struct Prepare {
     /// Services vat must provision before the case runs.
     #[serde(default)]
@@ -88,7 +88,7 @@ pub struct Prepare {
 /// `[exercise]` — the measured op. Exactly one engine: `request` (http) XOR
 /// `query` (sql); `n` is the knob.
 #[derive(Debug, Clone, Serialize, Deserialize)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
 pub struct Exercise {
     /// Iteration count. `1` (default) => behavior; `>>1` => load.
     #[serde(default = "default_n")]
@@ -105,7 +105,7 @@ pub struct Exercise {
 
 /// `[exercise.query]` — a sql query op (executed via the `postgres` feature).
 #[derive(Debug, Clone, Serialize, Deserialize)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
 pub struct QuerySpec {
     /// libpq-style DSN, e.g. `postgresql://user@127.0.0.1/db`.
     pub dsn: String,
@@ -117,14 +117,14 @@ pub struct QuerySpec {
 /// schedule is injected by the launcher from efficiency-EC config, not stored
 /// here; the case only names the folded metric the pin gates on.
 #[derive(Debug, Clone, Serialize, Deserialize)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
 pub struct LoadSpec {
     /// `p50_ms` | `p99_ms` | `error_rate` | `achieved_qps`.
     #[serde(default = "default_metric")]
     pub metric: String,
 }
 
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
 impl Default for LoadSpec {
     fn default() -> Self {
         Self {
@@ -137,7 +137,7 @@ impl Default for LoadSpec {
 /// `delegate = "vat-cow"` needs no steps; otherwise case-local http/sql
 /// `[[clean.step]]` entries run.
 #[derive(Debug, Clone, Default, Serialize, Deserialize)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
 pub struct Clean {
     /// Teardown delegate, e.g. `vat-cow` (drop the COW clone).
     #[serde(default)]
@@ -149,7 +149,7 @@ pub struct Clean {
 
 /// A parsed lifecycle case file.
 #[derive(Debug, Clone, Serialize, Deserialize)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
 pub struct TestCase {
     #[serde(rename = "case")]
     pub record: CaseRecord,
@@ -166,7 +166,7 @@ pub struct TestCase {
     pub clean: Clean,
 }
 
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
 impl TestCase {
     /// `suite/dimension/id` — the stable id used in reports, pins, baselines.
     /// Identical shape to [`super::scenario_id`] so pins/baselines carry over.
@@ -185,7 +185,7 @@ impl TestCase {
 
 /// Parse + structurally validate one lifecycle case file. The full 6-rule lint
 /// lands in rig-2; this enforces the parse + path==record floor.
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
 pub fn parse_case(path: &Path, text: &str) -> Result<TestCase, Vec<LintViolation>> {
     let case: TestCase = toml::from_str(text).map_err(|e| {
         vec![LintViolation {
@@ -231,7 +231,7 @@ fn is_compare_predicate(pred: &str) -> bool {
 /// bounds that keep the DSL a pure-data EC description — request present, http/sql
 /// only steps (no exec/script), compare-only expects (no control flow), and a
 /// known dimension.
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-scenario-case-rs.md#source
 pub fn lint_case(path: &Path, case: &TestCase) -> Vec<LintViolation> {
     let mut v = Vec::new();
     let stem = path
@@ -518,10 +518,10 @@ metric = "p99_ms"
 
 ```yaml
 changes:
-  - path: apps/rig/src/scenario/case.rs
+  - path: src/scenario/case.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `apps/rig/src/scenario/case.rs` captured during #39 rig standardization.
+      rust-source-unit (td_ast) source for `src/scenario/case.rs` captured during #39 rig standardization.
 ```

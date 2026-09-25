@@ -9,22 +9,22 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized apps/rig/src/vat.rs
+# Standardized src/vat.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `apps/rig/src/vat.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `src/vat.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `VatRun` | apps/rig/src/vat.rs | struct | pub | 26 |  |
-| `extract_report` | apps/rig/src/vat.rs | function | pub | 121 | extract_report(log: &str) -> Option<RigReport> |
-| `remove` | apps/rig/src/vat.rs | function | pub | 114 | remove(vat_id: &str) |
-| `run_runner` | apps/rig/src/vat.rs | function | pub | 37 | run_runner(runner: &str) -> Result<VatRun, String> |
-| `runner_log` | apps/rig/src/vat.rs | function | pub | 97 | runner_log(vat_id: &str) -> Result<String, String> |
+| `VatRun` | src/vat.rs | struct | pub | 26 |  |
+| `extract_report` | src/vat.rs | function | pub | 121 | extract_report(log: &str) -> Option<RigReport> |
+| `remove` | src/vat.rs | function | pub | 114 | remove(vat_id: &str) |
+| `run_runner` | src/vat.rs | function | pub | 37 | run_runner(runner: &str) -> Result<VatRun, String> |
+| `runner_log` | src/vat.rs | function | pub | 97 | runner_log(vat_id: &str) -> Result<String, String> |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -228,11 +228,11 @@ mod tests {
 
 ```yaml
 changes:
-  - path: apps/rig/src/vat.rs
+  - path: src/vat.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `apps/rig/src/vat.rs` captured during rig
+      rust-source-unit (td_ast) source for `src/vat.rs` captured during rig
       standardization onto the codegen ladder.
 ```

@@ -1,4 +1,4 @@
-// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-vat-rs.md#rust-source-unit
+// SPEC-MANAGED: tech-design/semantic/source/projects-rig-src-vat-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! vat integration: wrap a run in `vat run <runner>` and lift the inner
 //! rig report back out.
@@ -22,7 +22,7 @@ fn vat_bin() -> String {
 
 /// The outcome of one `vat run <runner>` invocation.
 #[derive(Debug)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-vat-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-vat-rs.md#source
 pub struct VatRun {
     pub vat_id: String,
     pub runner: String,
@@ -33,7 +33,7 @@ pub struct VatRun {
 }
 
 /// Spawn `vat run <runner>` and fold its checkpoint stream.
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-vat-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-vat-rs.md#source
 pub fn run_runner(runner: &str) -> Result<VatRun, String> {
     let output = Command::new(vat_bin())
         .args(["run", runner])
@@ -93,7 +93,7 @@ pub fn run_runner(runner: &str) -> Result<VatRun, String> {
 }
 
 /// Fetch the inner runner's captured stdout (`vat logs <id> runner`).
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-vat-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-vat-rs.md#source
 pub fn runner_log(vat_id: &str) -> Result<String, String> {
     let output = Command::new(vat_bin())
         .args(["logs", vat_id, "runner"])
@@ -110,14 +110,14 @@ pub fn runner_log(vat_id: &str) -> Result<String, String> {
 
 /// Best-effort removal once the report is lifted (the vat.toml uses
 /// `keep = "always"` so the log survives success; rig owns the cleanup).
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-vat-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-vat-rs.md#source
 pub fn remove(vat_id: &str) {
     let _ = Command::new(vat_bin()).args(["rm", vat_id]).output();
 }
 
 /// Extract the inner rig report from a runner log: the LAST line (or
 /// pretty-printed block) that parses as a `RigReport`.
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-vat-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-vat-rs.md#source
 pub fn extract_report(log: &str) -> Option<RigReport> {
     // Fast path: whole log is one pretty JSON document.
     if let Ok(report) = serde_json::from_str::<RigReport>(log.trim()) {

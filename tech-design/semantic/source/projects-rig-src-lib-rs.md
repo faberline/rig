@@ -9,24 +9,24 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized apps/rig/src/lib.rs
+# Standardized src/lib.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `apps/rig/src/lib.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `src/lib.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `discovery` | apps/rig/src/lib.rs | module | pub | 14 |  |
-| `engine` | apps/rig/src/lib.rs | module | pub | 15 |  |
-| `pins` | apps/rig/src/lib.rs | module | pub | 16 |  |
-| `report` | apps/rig/src/lib.rs | module | pub | 17 |  |
-| `scenario` | apps/rig/src/lib.rs | module | pub | 18 |  |
-| `vat` | apps/rig/src/lib.rs | module | pub | 19 |  |
-| `verdict` | apps/rig/src/lib.rs | module | pub | 20 |  |
+| `discovery` | src/lib.rs | module | pub | 14 |  |
+| `engine` | src/lib.rs | module | pub | 15 |  |
+| `pins` | src/lib.rs | module | pub | 16 |  |
+| `report` | src/lib.rs | module | pub | 17 |  |
+| `scenario` | src/lib.rs | module | pub | 18 |  |
+| `vat` | src/lib.rs | module | pub | 19 |  |
+| `verdict` | src/lib.rs | module | pub | 20 |  |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -56,11 +56,11 @@ pub mod verdict;
 
 ```yaml
 changes:
-  - path: apps/rig/src/lib.rs
+  - path: src/lib.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `apps/rig/src/lib.rs` captured during rig
+      rust-source-unit (td_ast) source for `src/lib.rs` captured during rig
       standardization onto the codegen ladder.
 ```

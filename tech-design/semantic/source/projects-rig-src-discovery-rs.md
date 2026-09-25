@@ -9,19 +9,19 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized apps/rig/src/discovery.rs
+# Standardized src/discovery.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `apps/rig/src/discovery.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `src/discovery.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `Discovered` | apps/rig/src/discovery.rs | struct | pub | 13 |  |
-| `discover` | apps/rig/src/discovery.rs | function | pub | 21 | discover(root: &Path) -> std::io::Result<Vec<Discovered>> |
+| `Discovered` | src/discovery.rs | struct | pub | 13 |  |
+| `discover` | src/discovery.rs | function | pub | 21 | discover(root: &Path) -> std::io::Result<Vec<Discovered>> |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -145,11 +145,11 @@ secs = 1
 
 ```yaml
 changes:
-  - path: apps/rig/src/discovery.rs
+  - path: src/discovery.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `apps/rig/src/discovery.rs` captured during rig
+      rust-source-unit (td_ast) source for `src/discovery.rs` captured during rig
       standardization onto the codegen ladder.
 ```

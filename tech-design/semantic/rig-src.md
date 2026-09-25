@@ -1,12 +1,12 @@
 ---
 id: semantic-rig-src
-summary: Semantic coverage for "apps/rig/src"
+summary: Semantic coverage for "src"
 capability_refs:
   - id: "scenario-engine"
     role: primary
     claim: "record-contract-check-and-json-report"
     coverage: partial
-    rationale: "Semantic takeover coverage for existing source group `apps/rig/src`."
+    rationale: "Semantic takeover coverage for existing source group `src`."
 fill_sections: [schema, changes]
 ---
 
@@ -18,11 +18,11 @@ fill_sections: [schema, changes]
 ```yaml
 semantic_domain:
   key: "rig/src"
-  source_group: "apps/rig/src"
+  source_group: "src"
   coverage_kind: semantic
   evidence:
     source_units:
-      - path: "apps/rig/src/config.rs"
+      - path: "src/config.rs"
         language: "rust"
         ownership_state: "codegen"
         generator_primitives: ["data_model", "service_method"]
@@ -59,7 +59,7 @@ semantic_domain:
           ecosystem: "rust"
           role: "source"
           section_type: "schema"
-          domain: "apps/rig/src"
+          domain: "src"
 ```
 
 ## Changes
@@ -68,7 +68,7 @@ semantic_domain:
 ```yaml
 coverage_kind: semantic
 changes:
-  - path: "apps/rig/src/config.rs"
+  - path: "src/config.rs"
     action: modify
     section: schema
     description: |

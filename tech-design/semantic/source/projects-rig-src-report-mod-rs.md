@@ -9,20 +9,20 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized apps/rig/src/report/mod.rs
+# Standardized src/report/mod.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `apps/rig/src/report/mod.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `src/report/mod.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `builder` | apps/rig/src/report/mod.rs | module | pub | 5 |  |
-| `envelope` | apps/rig/src/report/mod.rs | module | pub | 6 |  |
-| `finding` | apps/rig/src/report/mod.rs | module | pub | 7 |  |
+| `builder` | src/report/mod.rs | module | pub | 5 |  |
+| `envelope` | src/report/mod.rs | module | pub | 6 |  |
+| `finding` | src/report/mod.rs | module | pub | 7 |  |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -43,11 +43,11 @@ pub use finding::{finding_id, Finding, Invoke, Kind, Severity};
 
 ```yaml
 changes:
-  - path: apps/rig/src/report/mod.rs
+  - path: src/report/mod.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `apps/rig/src/report/mod.rs` captured during rig
+      rust-source-unit (td_ast) source for `src/report/mod.rs` captured during rig
       standardization onto the codegen ladder.
 ```

@@ -1,4 +1,4 @@
-// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-engine-exec-rs.md#rust-source-unit
+// SPEC-MANAGED: tech-design/semantic/source/projects-rig-src-engine-exec-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! The `exec` escape-hatch step: run a command under a timeout, check its
 //! exit code, optionally capture trimmed stdout.
@@ -11,7 +11,7 @@ use crate::scenario::interp::VarStore;
 use crate::scenario::step::ExecStep;
 
 #[derive(Debug)]
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-exec-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-engine-exec-rs.md#source
 pub struct ExecOutcome {
     pub exit_code: i32,
     pub stdout: String,
@@ -20,7 +20,7 @@ pub struct ExecOutcome {
     pub violation: Option<String>,
 }
 
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-exec-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-engine-exec-rs.md#source
 pub fn execute(step: &ExecStep, vars: &VarStore) -> Result<ExecOutcome, String> {
     if step.cmd.is_empty() {
         return Err("exec step has an empty cmd".into());

@@ -1,4 +1,4 @@
-// SPEC-MANAGED: apps/rig/tech-design/semantic/source/projects-rig-src-engine-mod-rs.md#rust-source-unit
+// SPEC-MANAGED: tech-design/semantic/source/projects-rig-src-engine-mod-rs.md#rust-source-unit
 // CODEGEN-BEGIN
 //! Scenario execution engine: drive steps sequentially against a
 //! [`VarStore`], collecting findings and captured metrics.
@@ -27,7 +27,7 @@ use crate::report::{finding_id, Finding, Invoke, Kind, Severity};
 use crate::scenario::{scenario_id, Scenario, Step, VarStore};
 
 /// The raw result of executing one scenario's steps.
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-mod-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-engine-mod-rs.md#source
 pub struct ScenarioRun {
     pub scenario_id: String,
     /// True when every step held its expectations.
@@ -39,7 +39,7 @@ pub struct ScenarioRun {
 }
 
 /// The raw result of running one phase's steps against a shared var store.
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-mod-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-engine-mod-rs.md#source
 pub struct PhaseRun {
     /// True when every step held its expectations.
     pub raw_passed: bool,
@@ -51,7 +51,7 @@ pub struct PhaseRun {
 /// `timeout_secs` budget (checked between steps). `subject` keys finding ids
 /// and the rerun hint. Lifted out of [`run_scenario`] so the lifecycle case
 /// model's prepare/exercise/clean phases can share one captured-var thread.
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-mod-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-engine-mod-rs.md#source
 pub fn run_phase(
     steps: &[Step],
     timeout_secs: u64,
@@ -101,7 +101,7 @@ pub fn run_phase(
 
 /// Execute an e2e scenario's steps. Thin wrapper over [`run_phase`] that seeds
 /// the var store from `[env]` and keys findings on the scenario id.
-/// @spec apps/rig/tech-design/semantic/source/projects-rig-src-engine-mod-rs.md#source
+/// @spec tech-design/semantic/source/projects-rig-src-engine-mod-rs.md#source
 pub fn run_scenario(scenario: &Scenario) -> ScenarioRun {
     let id = scenario_id(&scenario.record);
     let mut vars = VarStore::seed(&scenario.env);

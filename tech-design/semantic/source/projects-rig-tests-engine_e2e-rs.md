@@ -9,12 +9,12 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized apps/rig/tests/engine_e2e.rs
+# Standardized tests/engine_e2e.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `apps/rig/tests/engine_e2e.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `tests/engine_e2e.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
@@ -229,11 +229,11 @@ exprs = ["ready_recovered_secs < 5"]
 
 ```yaml
 changes:
-  - path: apps/rig/tests/engine_e2e.rs
+  - path: tests/engine_e2e.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `apps/rig/tests/engine_e2e.rs` captured during rig
+      rust-source-unit (td_ast) source for `tests/engine_e2e.rs` captured during rig
       standardization onto the codegen ladder.
 ```

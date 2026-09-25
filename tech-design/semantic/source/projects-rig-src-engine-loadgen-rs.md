@@ -9,22 +9,22 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized apps/rig/src/engine/loadgen.rs
+# Standardized src/engine/loadgen.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `apps/rig/src/engine/loadgen.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `src/engine/loadgen.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `LoadStats` | apps/rig/src/engine/loadgen.rs | struct | pub | 27 |  |
-| `Schedule` | apps/rig/src/engine/loadgen.rs | struct | pub | 54 |  |
-| `get` | apps/rig/src/engine/loadgen.rs | function | pub | 40 | get(&self, key: &str) -> Option<f64> |
-| `run` | apps/rig/src/engine/loadgen.rs | function | pub | 64 | run(profile: &LoadProfile, vars: &VarStore) -> LoadStats |
-| `run_transport` | apps/rig/src/engine/loadgen.rs | function | pub | 91 | run_transport(schedule: &Schedule, transport: &Arc<dyn Transport>) -> LoadStats |
+| `LoadStats` | src/engine/loadgen.rs | struct | pub | 27 |  |
+| `Schedule` | src/engine/loadgen.rs | struct | pub | 54 |  |
+| `get` | src/engine/loadgen.rs | function | pub | 40 | get(&self, key: &str) -> Option<f64> |
+| `run` | src/engine/loadgen.rs | function | pub | 64 | run(profile: &LoadProfile, vars: &VarStore) -> LoadStats |
+| `run_transport` | src/engine/loadgen.rs | function | pub | 91 | run_transport(schedule: &Schedule, transport: &Arc<dyn Transport>) -> LoadStats |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -317,11 +317,11 @@ mod tests {
 
 ```yaml
 changes:
-  - path: apps/rig/src/engine/loadgen.rs
+  - path: src/engine/loadgen.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `apps/rig/src/engine/loadgen.rs` captured during rig
+      rust-source-unit (td_ast) source for `src/engine/loadgen.rs` captured during rig
       standardization onto the codegen ladder.
 ```

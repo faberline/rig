@@ -9,19 +9,19 @@ capability_refs:
 fill_sections: [overview, source, changes]
 ---
 
-# Standardized apps/rig/src/engine/transport.rs
+# Standardized src/engine/transport.rs
 
 ## Overview
 <!-- type: overview lang: markdown -->
 
-Public API manifest for `apps/rig/src/engine/transport.rs` generated from AST during Score force-regeneration standardization.
+Public API manifest for `src/engine/transport.rs` generated from AST during Score force-regeneration standardization.
 
 ### Symbols
 
 | Name | Target | Kind | Visibility | Line | Signature |
 |------|--------|------|------------|------|-----------|
-| `HttpTransport` | apps/rig/src/engine/transport.rs | struct | pub | 39 |  |
-| `PostgresTransport` | apps/rig/src/engine/transport.rs | struct | pub | 143 |  |
+| `HttpTransport` | src/engine/transport.rs | struct | pub | 39 |  |
+| `PostgresTransport` | src/engine/transport.rs | struct | pub | 143 |  |
 ## Source
 <!-- type: rust-source-unit lang: rust -->
 
@@ -208,11 +208,11 @@ impl OpWorker for PgWorker {
 
 ```yaml
 changes:
-  - path: apps/rig/src/engine/transport.rs
+  - path: src/engine/transport.rs
     action: modify
     section: rust-source-unit
     impl_mode: codegen
     description: |
-      rust-source-unit (td_ast) source for `apps/rig/src/engine/transport.rs` captured during rig
+      rust-source-unit (td_ast) source for `src/engine/transport.rs` captured during rig
       standardization onto the codegen ladder.
 ```
